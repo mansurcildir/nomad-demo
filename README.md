@@ -3,12 +3,12 @@
 This demo demonstrates a simple cluster setup and service management using HashiCorp Nomad, Consul and Docker.
 
 ## Tech Stack
-- • VirtubalBox
-- • 5 Rocky Linux VM
-- • Docker
-- • Hashicorp Nomad
-- • Hashicorp Consul
-- • Dnsmasq
+• VirtubalBox  
+• 5 Rocky Linux VM  
+• Docker  
+• Hashicorp Nomad  
+• Hashicorp Consul  
+• Dnsmasq  
 
 • 192.168.99.104 -> manager1  
 • 192.168.99.107 -> manager2  
