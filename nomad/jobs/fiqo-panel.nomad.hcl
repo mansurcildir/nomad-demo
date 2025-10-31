@@ -22,7 +22,6 @@ job "fiqo-panel" {
       }
     }
 
-
     task "fiqo-panel" {
       driver = "docker"
 

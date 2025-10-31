@@ -50,7 +50,7 @@ job "postgres" {
       }
 
       resources {
-        cpu    =  100
+        cpu    = 100
         memory = 200
       }
     }

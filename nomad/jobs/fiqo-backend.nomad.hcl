@@ -58,8 +58,8 @@ job "fiqo-backend" {
 
         SMTP_HOST = "smtp.gmail.com"
         SMTP_PORT = "587"
-        SENDER_EMAIL = "mansurcildir@gmail.com"
-        SENDER_EMAIL_PASSWORD = "frfr lbzh jusq srwn"
+        SENDER_EMAIL = "YOUR_SENDER_EMAIL"
+        SENDER_EMAIL_PASSWORD = "YOUR_EMAIL_PASSWORD"
       }
 
       resources {
