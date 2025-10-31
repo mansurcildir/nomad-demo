@@ -1,10 +1,22 @@
 # nomad-demo
 
+This demo demonstrates a simple cluster setup and service management using HashiCorp Nomad, Consul and Docker.
+
+## Tech Stack
+- • VirtubalBox
+- • 5 Rocky Linux VM
+- • Docker
+- • Hashicorp Nomad
+- • Hashicorp Consul
+- • Dnsmasq
+
 • 192.168.99.104 -> manager1  
 • 192.168.99.107 -> manager2  
 • 192.168.99.108 -> manager3  
 • 192.168.99.105 -> worker1  
 • 192.168.99.106 -> worker2
+
+## Dns Records
 
 dnsmasq configuration for Rocky Linux cluster nodes;
 
@@ -35,11 +47,12 @@ listen-address=192.168.99.106
 
 systemd-resolved config for Ubuntu host machine;
 
-sudo nano /etc/systemd/resolved.conf.d/consul.conf
+sudo nano /etc/systemd/resolved.conf.d/consul.conf  
 [Resolve]  
 DNS=192.168.99.104 192.168.99.107 192.168.99.108  
-Domains=~consul  
+Domains=~consul
 
+## Screenshots
 <img width="1846" height="885" alt="Screenshot from 2025-10-31 13-00-44" src="https://github.com/user-attachments/assets/ad07941a-6eed-43c7-8ef0-4ae470bf52eb" />
 <img width="1846" height="885" alt="Screenshot from 2025-10-31 12-59-44" src="https://github.com/user-attachments/assets/d2583686-0cd6-4af7-bac6-1532984ae038" />
 <img width="1838" height="927" alt="Screenshot from 2025-10-31 12-56-23" src="https://github.com/user-attachments/assets/7b6aa3bd-3921-4bcf-a207-d9216c9c1aea" />
