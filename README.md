@@ -36,9 +36,9 @@ listen-address=192.168.99.106
 systemd-resolved config for Ubuntu host machine;
 
 sudo nano /etc/systemd/resolved.conf.d/consul.conf
-[Resolve]
-DNS=192.168.99.104 192.168.99.107 192.168.99.108
-Domains=~consul
+[Resolve]  
+DNS=192.168.99.104 192.168.99.107 192.168.99.108  
+Domains=~consul  
 
 <img width="1846" height="885" alt="Screenshot from 2025-10-31 12-59-44" src="https://github.com/user-attachments/assets/d2583686-0cd6-4af7-bac6-1532984ae038" />
 <img width="1838" height="927" alt="Screenshot from 2025-10-31 12-56-23" src="https://github.com/user-attachments/assets/7b6aa3bd-3921-4bcf-a207-d9216c9c1aea" />
