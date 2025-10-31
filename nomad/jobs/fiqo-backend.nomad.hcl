@@ -64,7 +64,7 @@ job "fiqo-backend" {
 
       resources {
         cpu    = 100
-        memory = 200
+        memory = 300
       }
     }
   }
