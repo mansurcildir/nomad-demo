@@ -32,7 +32,7 @@ job "haproxy" {
       driver = "docker"
 
       config {
-        image   = "haproxy:2.0"
+        image   = "haproxy:3.2"
         network_mode = "host"
 
         ports   = ["http", "haproxy_ui"]
@@ -68,13 +68,21 @@ frontend http_front
    default_backend fiqo_panel
 
 backend fiqo_backend
-    http-request replace-path ^/api(/.*)? \1
-    balance roundrobin
-    server-template fiqo-backend 10 _fiqo-backend._tcp.service.consul resolvers consul resolve-opts allow-dup-ip resolve-prefer ipv4 check
+  http-request replace-path ^/api(/.*)? \1
+  balance roundrobin
+{{ $i := 0 }}
+{{ range service "fiqo-backend" }}
+  {{ $i = add $i 1 }}
+  server fiqo-backend{{$i}} {{ .Address }}:{{ .Port }} check
+{{ end }}
 
 backend fiqo_panel
-    balance roundrobin
-    server-template fiqo-panel 10 _fiqo-panel._tcp.service.consul resolvers consul resolve-opts allow-dup-ip resolve-prefer ipv4 check
+  balance roundrobin
+{{ $i := 0 }}
+{{ range service "fiqo-panel" }}
+  {{ $i = add $i 1 }}
+  server fiqo-panel{{$i}} {{ .Address }}:{{ .Port }} check
+{{ end }}
 
 resolvers consul
     nameserver consul 127.0.0.1:8600
