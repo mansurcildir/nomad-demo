@@ -55,7 +55,7 @@ Domains=~consul
 ## Screenshots
 <img width="1846" height="885" alt="Screenshot from 2025-10-31 13-00-44" src="https://github.com/user-attachments/assets/ad07941a-6eed-43c7-8ef0-4ae470bf52eb" />
 <img width="1846" height="885" alt="Screenshot from 2025-10-31 12-59-44" src="https://github.com/user-attachments/assets/d2583686-0cd6-4af7-bac6-1532984ae038" />
-<img width="1838" height="927" alt="Screenshot from 2025-10-31 12-56-23" src="https://github.com/user-attachments/assets/7b6aa3bd-3921-4bcf-a207-d9216c9c1aea" />
+<img width="1849" height="769" alt="Screenshot from 2025-11-03 11-27-42" src="https://github.com/user-attachments/assets/828d1247-4650-4028-b2a1-adf727985511" />
 <img width="1852" height="486" alt="Screenshot from 2025-10-31 12-58-27" src="https://github.com/user-attachments/assets/6592cbd2-4904-4fe8-89a6-23904e174829" />
 <img width="1846" height="1004" alt="Screenshot from 2025-10-31 13-06-27" src="https://github.com/user-attachments/assets/8bc7aa74-3b32-40af-a4e2-0f35085f5b8b" />
 <img width="1838" height="998" alt="Screenshot from 2025-10-31 12-57-37" src="https://github.com/user-attachments/assets/16b7b0f0-ee7a-4620-8e8f-13c10aff9c4b" />
