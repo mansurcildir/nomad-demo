@@ -1,4 +1,5 @@
 job "node-exporter" {
+  region      = "global"
   datacenters = ["dc1"]
   type        = "system"
 

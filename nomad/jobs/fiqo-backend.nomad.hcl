@@ -1,5 +1,7 @@
 job "fiqo-backend" {
+  region      = "global"
   datacenters = ["dc1"]
+  type        = "service"
 
   group "fiqo-backend" {
     count = 3

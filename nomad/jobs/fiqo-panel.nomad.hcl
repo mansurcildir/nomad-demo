@@ -1,5 +1,7 @@
 job "fiqo-panel" {
+  region      = "global"
   datacenters = ["dc1"]
+  type        = "service"
 
   group "fiqo-panel" {
     count = 2
