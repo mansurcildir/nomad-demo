@@ -24,7 +24,7 @@ job "postgres" {
     }
 
     task "postgres" {
-      driver = "docker"
+      driver    = "docker"
 
       config {
         image   = "postgres:16.3-alpine"

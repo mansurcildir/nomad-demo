@@ -9,9 +9,9 @@ job "node-exporter" {
     }
 
     service {
-      name = "node-exporter"
-      port = 9100
-      tags = ["node-exporter"]
+      name         = "node-exporter"
+      port         = 9100
+      tags         = ["node-exporter"]
       address_mode = "alloc"
     }
 

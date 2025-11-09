@@ -10,7 +10,7 @@ job "haproxy" {
       port "http" {
         static = 8080
       }
-      
+
       port "haproxy_ui" {
         static = 1936
       }
