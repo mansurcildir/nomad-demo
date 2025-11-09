@@ -5,43 +5,32 @@ job "grafana" {
 
   group "grafana" {
     count = 1
-
+    
     constraint {
       attribute = "${node.unique.name}"
       operator  = "="
-      value     = "manager1"
+      value     = "server1"
     }
 
     network {
-      port "grafana" {
-        static = 3000
-      }
+      mode = "cni/cilium"
     }
     
     service {
-      name = "grafana"
-      port = "grafana"
-
-      check {
-        name     = "alive"
-        type     = "tcp"
-        interval = "10s"
-        timeout  = "2s"
-      }
+      name         = "grafana"
+      port         = 3000
+      tags         = ["grafana"]
+      address_mode = "alloc"
     }
 
     task "grafana" {
       driver = "docker"
 
       config {
-        image = "grafana/grafana:latest"
-        ports = ["grafana"]
-
-        mount {
-          type   = "bind"
-          source = "/opt/nomad/data/fiqo-grafana/data"
-          target = "/var/lib/grafana"
-        }
+        image   = "grafana/grafana:latest"
+        volumes = [
+          "/opt/nomad/data/grafana/data:/var/lib/grafana"
+        ]
       }
 
       env {

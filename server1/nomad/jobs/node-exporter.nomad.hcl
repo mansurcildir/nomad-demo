@@ -13,14 +13,7 @@ job "node-exporter" {
     service {
       name = "node-exporter"
       port = "exporter"
-
-      check {
-        name         = "alive"
-        type         = "tcp"
-        interval     = "10s"
-        timeout      = "2s"
-        port         = "exporter"
-      }
+      tags = ["node-exporter"]
     }
 
     task "node-exporter" {

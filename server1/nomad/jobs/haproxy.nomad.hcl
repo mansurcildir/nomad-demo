@@ -10,7 +10,7 @@ job "haproxy" {
       port "http" {
         static = 8080
       }
-
+      
       port "haproxy_ui" {
         static = 1936
       }
@@ -19,25 +19,17 @@ job "haproxy" {
     service {
       name = "haproxy"
       port = "http"
-
-      check {
-        name     = "alive"
-        type     = "tcp"
-        interval = "10s"
-        timeout  = "2s"
-      }
+      tags = ["haproxy"]
     }
 
     task "haproxy" {
       driver = "docker"
 
       config {
-        image   = "haproxy:3.2"
-        network_mode = "host"
-
-        ports   = ["http", "haproxy_ui"]
-        volumes = [
-          "local/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg",
+        image        = "haproxy:3.2"
+        ports        = ["http", "haproxy_ui"]
+        volumes      = [
+          "local/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
         ]
       }
 

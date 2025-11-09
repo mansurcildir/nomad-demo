@@ -2,14 +2,15 @@ data_dir  = "/opt/nomad/data"
 bind_addr = "0.0.0.0"
 
 server {
-  enabled          = true
-  bootstrap_expect = 3
+  enabled = false
 }
 
 client {
   enabled = true
-  servers = ["192.168.99.104:4647", "192.168.99.107:4647", "192.168.99.108:4647"]
-  network_interface = "enp0s8"
+  servers           = ["192.168.1.122"]
+  network_interface = "wlp8s0"
+  cni_path          = "/opt/cni/bin"
+  cni_config_dir    = "/opt/cni/config"
 }
 
 plugin "docker" {
@@ -28,8 +29,7 @@ telemetry {
 }
 
 advertise {
-  http = "192.168.99.107:4646"
-  rpc  = "192.168.99.107:4647"
-  serf = "192.168.99.107:4648"
+  http = "192.168.1.30:4646"
+  rpc  = "192.168.1.30:4647"
+  serf = "192.168.1.30:4648"
 }
-

@@ -5,43 +5,32 @@ job "postgres" {
 
   group "postgres" {
     count = 1
-
+    
     constraint {
       attribute = "${node.unique.name}"
       operator  = "="
-      value     = "manager1"
+      value     = "server1"
     }
    
     network {
-      port "postgres" {
-        static = 5432
-      }
+      mode = "cni/cilium"
     }
 
     service {
-      name = "postgres"
-      port = "postgres"
-
-      check {
-         name     = "alive"
-         type     = "tcp"
-         interval = "10s"
-         timeout  = "2s"
-      }
+      name         = "postgres"
+      port         = 5432
+      tags         = ["postgres"]
+      address_mode = "alloc"
     }
 
     task "postgres" {
       driver = "docker"
 
       config {
-        image = "postgres:16.3-alpine"
-        ports = ["postgres"]
-
-        mount {
-          type   = "bind"
-          source = "/opt/nomad/data/fiqo-postgres/data"
-          target = "/var/lib/postgresql/data"
-        }
+        image   = "postgres:16.3-alpine"
+        volumes = [
+          "/opt/nomad/data/postgres/data:/var/lib/postgresql/data"
+        ]
       }
 
       env {

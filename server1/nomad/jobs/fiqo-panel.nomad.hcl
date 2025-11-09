@@ -7,21 +7,14 @@ job "fiqo-panel" {
     count = 2
 
     network {
-      port "panel" {
-        to = 80
-      }
+      mode = "cni/cilium"
     }
 
     service {
-      name = "fiqo-panel"
-      port = "panel"
-
-      check {
-        name     = "alive"
-        type     = "tcp"
-        interval = "10s"
-        timeout  = "2s"
-      }
+      name         = "fiqo-panel"
+      port         = 80
+      tags         = ["fiqo-panel"]
+      address_mode = "alloc"
     }
 
     task "fiqo-panel" {
@@ -29,7 +22,6 @@ job "fiqo-panel" {
 
       config {
         image = "mansur74/fiqo-panel:latest"
-        ports = ["panel"]
       }
 
       resources {
