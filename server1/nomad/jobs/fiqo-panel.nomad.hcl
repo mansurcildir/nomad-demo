@@ -24,6 +24,10 @@ job "fiqo-panel" {
         image = "mansur74/fiqo-panel:latest"
       }
 
+      env {
+        SPRING_BASE_URL = "http://haproxy.service.consul:8080/api"
+      }
+
       resources {
         cpu    = 100
         memory = 200

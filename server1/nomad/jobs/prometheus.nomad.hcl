@@ -18,7 +18,7 @@ job "prometheus" {
 
     service {
       name         = "prometheus"
-      port         = 9091
+      port         = 9090
       tags         = ["prometheus"]
       address_mode = "alloc"
     }
@@ -29,7 +29,7 @@ job "prometheus" {
       config {
         image   = "prom/prometheus:latest"
         args    = [
-          "--web.listen-address=:9091",
+          "--web.listen-address=:9090",
           "--config.file=/etc/prometheus/prometheus.yml",
           "--storage.tsdb.path=/prometheus"
         ]
