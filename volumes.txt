@@ -9,3 +9,5 @@ sudo chmod -R 755 /opt/nomad/data/grafana
 sudo mkdir -p /opt/nomad/data/postgres/data
 sudo chown -R nomad:nomad /opt/nomad/data/postgres 
 sudo chmod -R 755 /opt/nomad/data/postgres
+
+sudo mkdir -p /opt/nomad/data/minio/data
