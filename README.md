@@ -33,12 +33,9 @@ Screenshots of an example demonstration for physical machines with 1 server and 
 • ``192.168.1.46`` -> ``server1``  
 • ``192.168.1.194`` -> ``client1``  
 
-<img width="856" height="908" alt="Screenshot from 2025-11-11 11-21-02" src="https://github.com/user-attachments/assets/daf78e04-9add-4b89-9590-c0d3cb89be26" />
-
-server1:
-<img width="1266" height="680" alt="Screenshot from 2025-11-11 11-24-33" src="https://github.com/user-attachments/assets/734642cf-0bbc-40b2-a558-9ad0ed1d55fb" />
-client1:
-<img width="1261" height="355" alt="Screenshot from 2025-11-11 11-37-18" src="https://github.com/user-attachments/assets/16c77589-27ec-4585-b60d-ec7ac12a8650" />
+<img width="866" height="906" alt="Screenshot from 2025-11-11 12-58-33" src="https://github.com/user-attachments/assets/74357dfe-8118-409f-a29c-0e77ab346937" />
+<img width="1303" height="668" alt="Screenshot from 2025-11-11 13-03-26" src="https://github.com/user-attachments/assets/efafca48-9e3e-49e2-bc5e-04f7d1bdc201" />
+<img width="1298" height="401" alt="Screenshot from 2025-11-11 13-02-58" src="https://github.com/user-attachments/assets/fd58ad7e-c04d-4ebe-ab79-1e7aed5c0b3f" />
 <img width="1840" height="1010" alt="Screenshot from 2025-11-11 11-28-51" src="https://github.com/user-attachments/assets/d6707614-2cb8-4517-9a65-189b1dad673d" />
 <img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-28" src="https://github.com/user-attachments/assets/ed00a3a8-0c74-4097-896f-c91e906eb0eb" />
 <img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-43" src="https://github.com/user-attachments/assets/88f8bdc4-fb47-4d2e-ab9e-5deebf87ede0" />
