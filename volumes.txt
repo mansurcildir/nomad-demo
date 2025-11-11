@@ -1,0 +1,8 @@
+sudo chown -R 65534:65534 /opt/nomad/data/prometheus 
+sudo chmod -R 755 /opt/nomad/data/prometheus
+
+sudo chown -R 472:0 /opt/nomad/data/grafana
+sudo chmod -R 755 /opt/nomad/data/grafana
+
+sudo chown -R nomad:nomad /opt/nomad/data/postgres 
+sudo chmod -R 755 /opt/nomad/data/postgres

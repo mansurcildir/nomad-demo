@@ -1,0 +1,21 @@
+[
+  {
+    "endpointSelector": {},
+    "labels": [
+      {
+        "key": "fiqo-policy"
+      }
+    ],
+    "ingress": [
+      {
+        "fromEntities": ["all"]
+      }
+    ],
+    "egress": [
+      {
+        "toEntities": ["all"]
+      }
+    ]
+  }
+]
+

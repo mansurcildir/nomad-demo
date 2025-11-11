@@ -2,14 +2,13 @@ data_dir  = "/opt/nomad/data"
 bind_addr = "0.0.0.0"
 
 server {
-  enabled          = true
-  bootstrap_expect = 3
+  enabled = false
 }
 
 client {
-  enabled           = true
+  enabled = true
   servers           = ["192.168.99.101", "192.168.99.102", "192.168.99.103"]
-  network_interface = "wlp0s20f3"
+  network_interface = "wlp8s0"
   cni_path          = "/opt/cni/bin"
   cni_config_dir    = "/opt/cni/config"
 }
@@ -29,7 +28,7 @@ telemetry {
 }
 
 advertise {
-  http = "192.168.99.101:4646"
-  rpc  = "192.168.99.101:4647"
-  serf = "192.168.99.101:4648"
+  http = "192.168.99.105:4646"
+  rpc  = "192.168.99.105:4647"
+  serf = "192.168.99.105:4648"
 }
