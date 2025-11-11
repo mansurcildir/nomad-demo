@@ -7,22 +7,29 @@ job "haproxy" {
     count = 1
 
     network {
-      mode = "cni/cilium"
+      port "http" {
+        static = 8080
+      }
+
+      port "haproxy_ui" {
+        static = 1936
+      }
     }
 
     service {
       name = "haproxy"
-      port = 8080
+      port = "http"
       tags = ["haproxy"]
-      address_mode = "alloc"
     }
 
     task "haproxy" {
       driver = "docker"
 
       config {
-        image        = "haproxy:3.2"
-        volumes      = [
+        image   = "haproxy:3.2"
+        ports   = ["http", "haproxy_ui"]
+
+        volumes = [
           "local/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
         ]
       }

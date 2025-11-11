@@ -48,7 +48,7 @@ job "minio" {
         MINIO_ROOT_PASSWORD = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
         EOT
 
-        destination         = ".env"
+        destination         = "local/.env"
         env                 = true
         change_mode         = "restart"
       }

@@ -29,7 +29,7 @@ job "fiqo-panel" {
         SPRING_BASE_URL = {{ key "secret/fiqo-panel/SPRING_BASE_URL" }}
         EOT
 
-        destination     = ".env"
+        destination     = "local/.env"
         env             = true
         change_mode     = "restart"
       }

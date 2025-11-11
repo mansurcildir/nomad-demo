@@ -39,7 +39,7 @@ job "grafana" {
         GF_SECURITY_ADMIN_PASSWORD = {{ key "secret/grafana/GF_SECURITY_ADMIN_PASSWORD" }}
         EOT
 
-        destination                = ".env"
+        destination                = "local/.env"
         env                        = true
         change_mode                = "restart"
       }

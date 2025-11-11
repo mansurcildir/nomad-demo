@@ -57,7 +57,7 @@ job "fiqo-backend" {
         SENDER_EMAIL_PASSWORD = {{ key "secret/fiqo-backend/SENDER_EMAIL_PASSWORD" }}
         EOT
 
-        destination           = ".env"
+        destination           = "local/.env"
         env                   = true
         change_mode           = "restart"
       }
