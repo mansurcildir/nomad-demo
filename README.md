@@ -40,6 +40,6 @@ Screenshots of an example demonstration for physical machines with 1 server and 
 <img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-43" src="https://github.com/user-attachments/assets/88f8bdc4-fb47-4d2e-ab9e-5deebf87ede0" />
 <img width="1840" height="1010" alt="Screenshot from 2025-11-11 11-33-19" src="https://github.com/user-attachments/assets/2d2f2428-b970-4a4f-800f-47eb78b5d3e7" />
 <img width="1837" height="1004" alt="Screenshot from 2025-11-11 17-03-18" src="https://github.com/user-attachments/assets/74f80227-ad98-4b91-8cd3-aa752a0d1359" />
-<img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-11-04" src="https://github.com/user-attachments/assets/f657a167-a8e4-4dbb-9259-0f1135f88117" />
+<img width="1837" height="1004" alt="Screenshot from 2025-11-11 17-27-25" src="https://github.com/user-attachments/assets/f1c24d0e-aa8d-44d6-8bd4-7acaf78e540e" />
 <img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-10-32" src="https://github.com/user-attachments/assets/30dd6ed7-2ac7-4f20-98c5-039146c68b5a" />
 <img width="1838" height="998" alt="Screenshot from 2025-10-31 12-57-37" src="https://github.com/user-attachments/assets/d6ae892d-1426-41b0-815e-b10862362189" />
