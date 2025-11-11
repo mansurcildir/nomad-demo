@@ -1,6 +1,6 @@
 # nomad-demo
 
-This demonstration shows a documentation of nomad cluster setup and service management for FIQO (File Quick Online) application with Docker, Cilium, HashiCorp Nomad, HashiCorp Consul.
+This demonstration shows a documentation of nomad cluster setup and service management for FIQO (File Quick Online) application with ``Docker``, ``Cilium``, ``HashiCorp Nomad``, ``HashiCorp Consul``.
 
 • ``192.168.99.101`` -> ``server1``  
 • ``192.168.99.102`` -> ``server2``  
@@ -8,7 +8,7 @@ This demonstration shows a documentation of nomad cluster setup and service mana
 • ``192.168.99.104`` -> ``client1``  
 • ``192.168.99.105`` -> ``client2``
 
-Not: postgres, minio, prometheus and grafana are stateful services for the demo and are dependent on the server1 node.
+Not: ``postgres``, ``minio``, ``prometheus`` and ``grafana`` are stateful services for the demo and are dependent on the ``server1`` node.
 
 ## Tech Stack
 
