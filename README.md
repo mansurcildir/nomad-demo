@@ -22,7 +22,7 @@ Not: ``postgres``, ``minio``, ``prometheus`` and ``grafana`` are stateful servic
 
 **Overlay Network**: ``Cilium``, ``Cilium CNI``
 
-**DNS Resolver**: ``systemd-resolved``
+**DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
 **Demo App**: https://github.com/mansurcildir/fiqo
 
