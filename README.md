@@ -1,6 +1,6 @@
 # nomad-demo
 
-This demonstration shows a documentation of nomad cluster setup and service management for FIQO (File Quick Online) application with ``Docker``, ``Cilium``, ``HashiCorp Nomad``, ``HashiCorp Consul``.
+This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup and orchestration for FIQO (File Quick Online) application.
 
 • ``192.168.99.101`` -> ``server1``  
 • ``192.168.99.102`` -> ``server2``  
@@ -36,7 +36,6 @@ Screenshots of an example demonstration for physical machines with 1 server and 
 <img width="866" height="906" alt="Screenshot from 2025-11-11 12-58-33" src="https://github.com/user-attachments/assets/74357dfe-8118-409f-a29c-0e77ab346937" />
 <img width="1303" height="668" alt="Screenshot from 2025-11-11 13-03-26" src="https://github.com/user-attachments/assets/efafca48-9e3e-49e2-bc5e-04f7d1bdc201" />
 <img width="1298" height="401" alt="Screenshot from 2025-11-11 13-02-58" src="https://github.com/user-attachments/assets/fd58ad7e-c04d-4ebe-ab79-1e7aed5c0b3f" />
-<img width="1840" height="1010" alt="Screenshot from 2025-11-11 11-28-51" src="https://github.com/user-attachments/assets/d6707614-2cb8-4517-9a65-189b1dad673d" />
 <img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-28" src="https://github.com/user-attachments/assets/ed00a3a8-0c74-4097-896f-c91e906eb0eb" />
 <img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-43" src="https://github.com/user-attachments/assets/88f8bdc4-fb47-4d2e-ab9e-5deebf87ede0" />
 <img width="1840" height="1010" alt="Screenshot from 2025-11-11 11-33-19" src="https://github.com/user-attachments/assets/2d2f2428-b970-4a4f-800f-47eb78b5d3e7" />
