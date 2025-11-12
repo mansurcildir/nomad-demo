@@ -30,7 +30,7 @@ Not: ``postgres``, ``minio``, ``prometheus`` and ``grafana`` are stateful servic
 
 ## Screenshots
 
-Screenshots of an example demonstration for physical machines with 1 server and 1 client.
+Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines with 1 server and 1 client.
 
 • ``192.168.1.46`` -> ``server1``  
 • ``192.168.1.194`` -> ``client1``  
