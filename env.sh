@@ -8,7 +8,7 @@ consul kv put secret/fiqo-db/USERNAME admin
 consul kv put secret/fiqo-db/PASSWORD admin123
 
 # --- fiqo-backend ---
-consul kv put secret/fiqo-backend/PANEL_BASE_URL http://fiqo-panel.service.consul:80
+consul kv put secret/fiqo-backend/PANEL_BASE_URL http://haproxy.service.consul:8080
 consul kv put secret/fiqo-backend/STORAGE_STRATEGY s3
 consul kv put secret/fiqo-backend/MINIO_BASE_URL http://minio-api.service.consul:9000
 consul kv put secret/fiqo-backend/MINIO_BUCKET_NAME fiqo
