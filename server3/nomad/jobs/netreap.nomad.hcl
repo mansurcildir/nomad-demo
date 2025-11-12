@@ -22,7 +22,7 @@ job "netreap" {
       }
 
       config {
-        image        = "ghcr.io/cosmonic/netreap:0.1.0"
+        image        = "ghcr.io/cosmonic/netreap:0.2.0"
         network_mode = "host"
 
         volumes = [

@@ -24,6 +24,8 @@ Not: ``postgres``, ``minio``, ``prometheus`` and ``grafana`` are stateful servic
 
 **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
+**Monitoring**: ``Prometheus``, ``Grafana``
+
 **Demo App**: https://github.com/mansurcildir/fiqo
 
 ## Screenshots
