@@ -9,7 +9,7 @@ server {
 client {
   enabled           = true
   servers           = ["192.168.99.101", "192.168.99.102", "192.168.99.103"]
-  network_interface = "wlp0s20f3"
+  network_interface = "wlp8s0"
   cni_path          = "/opt/cni/bin"
   cni_config_dir    = "/opt/cni/config"
 }

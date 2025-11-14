@@ -26,8 +26,8 @@ ExecStart=/usr/bin/docker run --rm --name %n \
     --enable-ipv6=false -t geneve \
     --enable-l7-proxy=false \
     --ipv4-range 172.16.0.0/16 \
-    --ipv4-node 192.168.1.30 \
-    --devices wlp0s20f3 \
+    --ipv4-node 192.168.1.104 \
+    --devices wlp8s0 \
     --prometheus-serve-addr=:9090
 
 [Install]
