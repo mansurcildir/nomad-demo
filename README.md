@@ -18,7 +18,7 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 **Service Discovery and KV Store:** ``Hashicorp Consul``
 
-**Overlay Network**: ``Cilium``, ``Cilium CNI``
+**Overlay Network**: ``eBPF``, ``Cilium``, ``Cilium CNI``
 
 **Scalable Network Filesystem**: ``Gluster``
 
