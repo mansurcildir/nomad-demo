@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # --- fiqo-db ---
-consul kv put secret/fiqo-db/HOST postgres.service.consul
+consul kv put secret/fiqo-db/HOST haproxy.service.consul
 consul kv put secret/fiqo-db/PORT 5432
 consul kv put secret/fiqo-db/DATABASE fiqo
 consul kv put secret/fiqo-db/USERNAME admin
 consul kv put secret/fiqo-db/PASSWORD admin123
 
 # --- fiqo-backend ---
-consul kv put secret/fiqo-backend/PANEL_BASE_URL http://haproxy.service.consul:8080
+consul kv put secret/fiqo-backend/PANEL_BASE_URL http://haproxy.service.consul:80
 consul kv put secret/fiqo-backend/STORAGE_STRATEGY s3
-consul kv put secret/fiqo-backend/MINIO_BASE_URL http://minio-api.service.consul:9000
+consul kv put secret/fiqo-backend/MINIO_BASE_URL http://haproxy.service.consul:9000
 consul kv put secret/fiqo-backend/MINIO_BUCKET_NAME fiqo
 consul kv put secret/fiqo-backend/ACCESS_TOKEN_EXP_MIN 5
 consul kv put secret/fiqo-backend/REFRESH_TOKEN_EXP_MIN 30
@@ -26,7 +26,7 @@ consul kv put secret/fiqo-backend/SENDER_EMAIL YOUR_SENDER_EMAIL
 consul kv put secret/fiqo-backend/SENDER_EMAIL_PASSWORD YOUR_EMAIL_PASSWORD
 
 # --- fiqo-panel ---
-consul kv put secret/fiqo-panel/SPRING_BASE_URL http://haproxy.service.consul:8080/api
+consul kv put secret/fiqo-panel/SPRING_BASE_URL http://haproxy.service.consul:8080
 
 # --- minio ---
 consul kv put secret/minio/MINIO_ROOT_USER admin

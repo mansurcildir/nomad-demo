@@ -5,12 +5,6 @@ job "postgres" {
 
   group "postgres" {
     count = 1
-
-    constraint {
-      attribute = "${node.unique.name}"
-      operator  = "="
-      value     = "server1"
-    }
    
     network {
       mode = "cni/cilium"
@@ -29,7 +23,7 @@ job "postgres" {
       config {
         image   = "postgres:16.3-alpine"
         volumes = [
-          "/opt/nomad/data/postgres/data:/var/lib/postgresql/data"
+          "/mnt/glusterfs/postgres/data:/var/lib/postgresql/data"
         ]
       }
 

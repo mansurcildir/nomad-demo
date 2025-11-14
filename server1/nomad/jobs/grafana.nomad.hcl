@@ -4,13 +4,7 @@ job "grafana" {
   type        = "service"
 
   group "grafana" {
-    count = 1
-    
-    constraint {
-      attribute = "${node.unique.name}"
-      operator  = "="
-      value     = "server1"
-    }
+    count = 2
 
     network {
       mode = "cni/cilium"
@@ -29,7 +23,7 @@ job "grafana" {
       config {
         image   = "grafana/grafana:latest"
         volumes = [
-          "/opt/nomad/data/grafana/data:/var/lib/grafana"
+          "/mnt/glusterfs/grafana/data:/var/lib/grafana"
         ]
       }
 

@@ -5,12 +5,6 @@ job "prometheus" {
 
   group "prometheus" {
     count = 1
-    
-    constraint {
-      attribute = "${node.unique.name}"
-      operator  = "="
-      value     = "server1"
-    }
 
     network {
       mode = "cni/cilium"
@@ -18,7 +12,7 @@ job "prometheus" {
 
     service {
       name         = "prometheus"
-      port         = 9090
+      port         = 9091
       tags         = ["prometheus"]
       address_mode = "alloc"
     }
@@ -29,13 +23,13 @@ job "prometheus" {
       config {
         image   = "prom/prometheus:latest"
         args    = [
-          "--web.listen-address=:9090",
+          "--web.listen-address=:9091",
           "--config.file=/etc/prometheus/prometheus.yml",
           "--storage.tsdb.path=/prometheus"
         ]
         volumes = [
-          "/opt/nomad/data/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml",
-          "/opt/nomad/data/prometheus/data:/prometheus"
+          "/mnt/glusterfs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml",
+          "/mnt/glusterfs/prometheus/data:/prometheus"
         ]
       }
 

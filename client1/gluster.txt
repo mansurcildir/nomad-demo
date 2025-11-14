@@ -1,0 +1,16 @@
+sudo apt install glusterfs-server -y
+sudo systemctl enable --now glusterd
+
+# mount directories
+sudo mkdir -p /mnt/glusterfs
+
+sudo mount -t glusterfs 192.168.1.101:/gv0 /mnt/glusterfs
+
+sudo chown -R 65534:65534 /mnt/glusterfs/prometheus
+sudo chmod -R 755 /mnt/glusterfs/prometheus
+
+sudo chown -R 472:0 /mnt/glusterfs/rafana
+sudo chmod -R 755 /mnt/glusterfs/grafana
+
+sudo chown -R nomad:nomad /mnt/glusterfs/postgres
+sudo chmod -R 755 /mnt/glusterfs/postgres

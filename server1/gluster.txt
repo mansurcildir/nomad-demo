@@ -1,0 +1,28 @@
+sudo apt install glusterfs-server -y
+sudo systemctl enable --now glusterd
+
+#add other servers to the cluster
+sudo gluster peer probe 192.168.99.102
+sudo gluster peer probe 192.168.99.103
+
+# brick and mount directories
+sudo mkdir -p /data/brick1
+sudo mkdir -p /mnt/glusterfs
+
+# create volume
+sudo gluster volume create gv0 replica 3 \
+  192.168.99.101:/data/brick1 \
+  192.168.99.102:/data/brick1 \
+  192.168.99.103:/data/brick1
+
+# start volume
+sudo gluster volume start gv0
+
+sudo chown -R 65534:65534 /mnt/glusterfs/prometheus
+sudo chmod -R 755 /mnt/glusterfs/prometheus
+
+sudo chown -R 472:0 /mnt/glusterfs/rafana
+sudo chmod -R 755 /mnt/glusterfs/grafana
+
+sudo chown -R nomad:nomad /mnt/glusterfs/postgres
+sudo chmod -R 755 /mnt/glusterfs/postgres

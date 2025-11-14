@@ -1,0 +1,86 @@
+global
+    maxconn 2000
+
+defaults
+    mode http
+    timeout connect 5s
+    timeout client  50s
+    timeout server  50s
+
+frontend stats
+   bind *:1936
+   stats uri /
+   stats show-legends
+   no log
+
+frontend fiqo_backend
+   bind *:8080
+   default_backend fiqo_backend
+
+backend fiqo_backend
+    balance roundrobin
+{{ range $index, $service := service "fiqo-backend" }}
+    server fiqo-backend{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend fiqo_panel
+   bind *:80
+   default_backend fiqo_panel
+
+backend fiqo_panel
+    balance roundrobin
+{{ range $index, $service := service "fiqo-panel" }}
+    server fiqo-panel{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend prometheus
+   bind *:9091
+   default_backend prometheus
+
+backend prometheus
+    balance roundrobin
+{{ range $index, $service := service "prometheus" }}
+    server prometheus{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend grafana
+   bind *:3000
+   default_backend grafana
+
+backend grafana
+    balance roundrobin
+{{ range $index, $service := service "grafana" }}
+    server grafana{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend minio-api
+   bind *:9000
+   default_backend minio-api
+
+backend minio-api
+    balance roundrobin
+{{ range $index, $service := service "minio-api" }}
+    server minio-api{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend minio-console
+   bind *:9001
+   default_backend minio-console
+
+backend minio-console
+    balance roundrobin
+{{ range $index, $service := service "minio-console" }}
+    server minio-console{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend postgres
+    bind *:5432
+    mode tcp
+    default_backend postgres
+
+backend postgres
+    mode tcp
+    balance roundrobin
+{{ range $index, $service := service "postgres" }}
+    server postgres{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}

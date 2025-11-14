@@ -4,13 +4,7 @@ job "minio" {
   type        = "service"
 
   group "minio" {
-    count = 1
-    
-    constraint {
-      attribute = "${node.unique.name}"
-      operator  = "="
-      value     = "server1"
-    }
+    count = 2
 
     network {
       mode = "cni/cilium"
@@ -38,7 +32,7 @@ job "minio" {
         command = "server"
         args    = ["/data", "--console-address", ":9001"]
         volumes = [
-          "/opt/nomad/data/minio/data:/data"
+          "/mnt/glusterfs/minio/data:/data"
         ]
       }
 

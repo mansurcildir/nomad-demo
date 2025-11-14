@@ -8,8 +8,6 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 • ``192.168.99.104`` -> ``client1``  
 • ``192.168.99.105`` -> ``client2``
 
-Not: ``postgres``, ``minio``, ``prometheus`` and ``grafana`` are stateful services for the demo and are dependent on the ``server1`` node.
-
 ## Tech Stack
 
 **OS:** ``Ubuntu/Debian``
@@ -21,6 +19,10 @@ Not: ``postgres``, ``minio``, ``prometheus`` and ``grafana`` are stateful servic
 **Service Discovery and KV Store:** ``Hashicorp Consul``
 
 **Overlay Network**: ``Cilium``, ``Cilium CNI``
+
+**Scalable Network Filesystem**: ``Gluster``
+
+**Load Balancer**: ``HAProxy``
 
 **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
