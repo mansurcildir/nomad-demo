@@ -4,7 +4,13 @@ job "grafana" {
   type        = "service"
 
   group "grafana" {
-    count = 2
+    count = 1
+
+    constraint {
+        attribute = "${node.unique.name}"
+        operator  = "="
+        value     = "server1"
+      }
 
     network {
       mode = "cni/cilium"

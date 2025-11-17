@@ -20,7 +20,7 @@ consul kv put secret/fiqo-backend/GOOGLE_CLIENT_ID YOUR_GOOGLE_CLIENT_ID
 consul kv put secret/fiqo-backend/GOOGLE_CLIENT_SECRET YOUR_GOOGLE_CLIENT_SECRET
 consul kv put secret/fiqo-backend/GITHUB_CLIENT_ID YOUR_GITHUB_CLIENT_ID
 consul kv put secret/fiqo-backend/GITHUB_CLIENT_SECRET YOUR_GITHUB_CLIENT_SECRET
-consul kv put secret/fiqo-backend/SMTP_HOST smtp.gmail.com
+consul kv put secret/fiqo-backend/SMTP_HOST YOUR_SMTP_HOST
 consul kv put secret/fiqo-backend/SMTP_PORT 587
 consul kv put secret/fiqo-backend/SENDER_EMAIL YOUR_SENDER_EMAIL
 consul kv put secret/fiqo-backend/SENDER_EMAIL_PASSWORD YOUR_EMAIL_PASSWORD

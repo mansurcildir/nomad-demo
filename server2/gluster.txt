@@ -7,7 +7,7 @@ sudo mkdir -p /mnt/glusterfs
 sudo chown -R 65534:65534 /mnt/glusterfs/prometheus
 sudo chmod -R 755 /mnt/glusterfs/prometheus
 
-sudo chown -R 472:0 /mnt/glusterfs/rafana
+sudo chown -R 472:0 /mnt/glusterfs/grafana
 sudo chmod -R 755 /mnt/glusterfs/grafana
 
 sudo chown -R nomad:nomad /mnt/glusterfs/postgres
