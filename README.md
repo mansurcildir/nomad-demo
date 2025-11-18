@@ -37,15 +37,16 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines with 1 server and 1 client.
 
 • ``192.168.1.46`` -> ``server1``  
-• ``192.168.1.194`` -> ``client1``  
+• ``192.168.1.194`` -> ``client1`` 
 
-<img width="866" height="906" alt="Screenshot from 2025-11-11 12-58-33" src="https://github.com/user-attachments/assets/74357dfe-8118-409f-a29c-0e77ab346937" />
-<img width="1303" height="668" alt="Screenshot from 2025-11-11 13-03-26" src="https://github.com/user-attachments/assets/efafca48-9e3e-49e2-bc5e-04f7d1bdc201" />
-<img width="1298" height="401" alt="Screenshot from 2025-11-11 13-02-58" src="https://github.com/user-attachments/assets/fd58ad7e-c04d-4ebe-ab79-1e7aed5c0b3f" />
-<img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-28" src="https://github.com/user-attachments/assets/ed00a3a8-0c74-4097-896f-c91e906eb0eb" />
-<img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-12-43" src="https://github.com/user-attachments/assets/88f8bdc4-fb47-4d2e-ab9e-5deebf87ede0" />
-<img width="1840" height="1010" alt="Screenshot from 2025-11-11 11-33-19" src="https://github.com/user-attachments/assets/2d2f2428-b970-4a4f-800f-47eb78b5d3e7" />
-<img width="1837" height="1004" alt="Screenshot from 2025-11-11 17-03-18" src="https://github.com/user-attachments/assets/74f80227-ad98-4b91-8cd3-aa752a0d1359" />
-<img width="1837" height="1004" alt="Screenshot from 2025-11-11 17-27-25" src="https://github.com/user-attachments/assets/f1c24d0e-aa8d-44d6-8bd4-7acaf78e540e" />
-<img width="1843" height="1012" alt="Screenshot from 2025-11-11 11-10-32" src="https://github.com/user-attachments/assets/30dd6ed7-2ac7-4f20-98c5-039146c68b5a" />
-<img width="1838" height="998" alt="Screenshot from 2025-10-31 12-57-37" src="https://github.com/user-attachments/assets/d6ae892d-1426-41b0-815e-b10862362189" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-08-28" src="https://github.com/user-attachments/assets/0b07ff3b-f492-41f2-9547-b8b3f6bf8efa" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-08-36" src="https://github.com/user-attachments/assets/cbfe4bb1-296a-4437-9481-24718ec9c053" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-09-02" src="https://github.com/user-attachments/assets/de79c01d-e196-4881-8b9d-b8b0d1366204" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 19-56-30" src="https://github.com/user-attachments/assets/bf92182a-2da0-445f-b687-6da36f951897" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 19-57-01" src="https://github.com/user-attachments/assets/fa5f552f-664e-4ed2-92d6-10dcca844648" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-08-06" src="https://github.com/user-attachments/assets/711b4aad-1b24-42e7-813c-708a4aea5d90" />
+<img width="1855" height="1044" alt="Screenshot from 2025-11-17 19-55-08" src="https://github.com/user-attachments/assets/217cde17-b115-4993-be6d-f04ad844d6fb" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 19-57-54" src="https://github.com/user-attachments/assets/57c3af61-2c5e-4e1a-94ba-832ac8b5ac20" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-09-57" src="https://github.com/user-attachments/assets/015f1358-9b68-49db-a905-0ff0924b18e3" />
+<img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-07-31" src="https://github.com/user-attachments/assets/3081f1f6-68ee-4a57-8e47-97b20981dd1d" />
+
