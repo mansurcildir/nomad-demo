@@ -28,7 +28,7 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
-**Monitoring**: ``Prometheus``, ``Grafana``
+**Monitoring**: ``Grafana``, ``Prometheus``, ``Loki``, ``Promtail``
 
 **Demo App**: https://github.com/mansurcildir/fiqo
 
@@ -49,4 +49,3 @@ Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines 
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 19-57-54" src="https://github.com/user-attachments/assets/57c3af61-2c5e-4e1a-94ba-832ac8b5ac20" />
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-09-57" src="https://github.com/user-attachments/assets/015f1358-9b68-49db-a905-0ff0924b18e3" />
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-07-31" src="https://github.com/user-attachments/assets/3081f1f6-68ee-4a57-8e47-97b20981dd1d" />
-

@@ -4,8 +4,8 @@ job "postgres" {
   type        = "service"
 
   group "postgres" {
-    count = 1
-   
+    count = 2
+
     network {
       mode = "cni/cilium"
     }

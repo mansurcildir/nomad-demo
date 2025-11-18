@@ -8,7 +8,7 @@ job "fiqo-backend" {
 
     scaling {
       min     = 1
-      max     = 5
+      max     = 2
       enabled = true
 
       policy {
