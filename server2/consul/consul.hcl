@@ -11,4 +11,4 @@ bind_addr        = "192.168.99.102"
 advertise_addr   = "192.168.99.102"
 server           = true
 bootstrap_expect = 3
-retry_join       = ["192.168.99.101", "192.168.99.103"]
+retry_join       = ["192.168.99.101", "192.168.99.102", "192.168.99.103"]

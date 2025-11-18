@@ -8,6 +8,7 @@ sudo gluster peer probe 192.168.99.103
 # brick and mount directories
 sudo mkdir -p /data/brick1
 sudo mkdir -p /mnt/glusterfs
+sudo mount -t glusterfs 192.168.1.101:/gv0 /mnt/glusterfs
 
 # create volume
 sudo gluster volume create gv0 replica 3 \

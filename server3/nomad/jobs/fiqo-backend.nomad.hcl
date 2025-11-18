@@ -4,7 +4,27 @@ job "fiqo-backend" {
   type        = "service"
 
   group "fiqo-backend" {
-    count = 2
+    count = 1
+
+    scaling {
+      min     = 1
+      max     = 5
+      enabled = true
+
+      policy {
+        evaluation_interval = "5s"
+        cooldown            = "1m"
+
+        check "average_allocated_cpu" {
+          source = "prometheus"
+          query  = "avg(jvm_memory_used_bytes{area=\"heap\", job=\"fiqo-backend\"}) / avg(jvm_memory_max_bytes{area=\"heap\", job=\"fiqo-backend\"}) * 100"
+
+          strategy "target-value" {
+            target = 60
+          }
+        }
+      }
+    }
 
     network {
       mode = "cni/cilium"
@@ -63,8 +83,8 @@ job "fiqo-backend" {
       }
 
       resources {
-        cpu    = 100
-        memory = 300
+        cpu    = 256
+        memory = 512
       }
     }
   }

@@ -22,7 +22,9 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 **Scalable Network Filesystem**: ``Gluster``
 
-**Load Balancer**: ``HAProxy``
+**Load Balancer**: ``HAProxy`` ``keepalived (active-passive)``
+
+**Auto Scaler**: ``nomad-autoscaler``
 
 **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
