@@ -5,14 +5,14 @@ job "promtail" {
 
   group "promtail" {
     network {
-      port "promtail" {
+      port "http" {
         static = 9080
       }
     }
 
     service {
       name = "promtail"
-      port = "promtail"
+      port = "http"
       tags = ["promtail"]
     }
 
@@ -21,14 +21,15 @@ job "promtail" {
 
       config {
         image   = "grafana/promtail:latest"
-        ports   = ["promtail"]
+        ports   = ["http"]
 
         args    = ["-config.file=/etc/promtail/promtail.yml"]
         volumes = [
           "/mnt/glusterfs/promtail/promtail.yml:/etc/promtail/promtail.yml",
           "/mnt/glusterfs/promtail/positions:/tmp",
           "/var/log:/alloc/logs:ro",
-          "/var/lib/docker/containers:/var/lib/docker/containers:ro"
+          "/var/lib/docker/containers:/var/lib/docker/containers:ro",
+          "/opt/nomad/data/alloc:/opt/nomad/data/alloc:ro"
         ]
       }
 

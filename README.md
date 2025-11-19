@@ -28,7 +28,9 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
-**Monitoring**: ``Grafana``, ``Prometheus``, ``Loki``, ``Promtail``
+**Monitoring**: ``Grafana``
+- Metrics: ``Prometheus``
+- Logs: ``Loki``, ``Promtail``
 
 **Demo App**: https://github.com/mansurcildir/fiqo
 

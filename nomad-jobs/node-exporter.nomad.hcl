@@ -5,14 +5,15 @@ job "node-exporter" {
 
   group "node-exporter" {
     network {
-      mode = "cni/cilium"
+      port "http"{
+        static = 9100
+      }
     }
 
     service {
-      name         = "node-exporter"
-      port         = 9100
-      tags         = ["node-exporter"]
-      address_mode = "alloc"
+      name = "node-exporter"
+      port = "http"
+      tags = ["node-exporter"]
     }
 
     task "node-exporter" {
