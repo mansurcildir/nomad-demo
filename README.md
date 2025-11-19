@@ -38,7 +38,7 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ## Screenshots
 
-Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines with 1 server and 1 client.
+Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines with ``server1``  and ``client1``.
 
 • ``192.168.1.46`` -> ``server1``  
 • ``192.168.1.194`` -> ``client1``
