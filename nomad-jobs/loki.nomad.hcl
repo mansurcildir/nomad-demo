@@ -21,10 +21,10 @@ job "loki" {
       driver = "docker"
 
       config {
-        image = "grafana/loki:latest"
-        args  = ["-config.file=/etc/loki/loki.yaml", "-config.expand-env=true"]
+        image   = "grafana/loki:latest"
+        args    = ["-config.file=/etc/loki/loki.yml", "-config.expand-env=true"]
         volumes = [
-          "/mnt/glusterfs/loki/loki.yaml:/etc/loki/loki.yaml",
+          "/mnt/glusterfs/loki/loki.yml:/etc/loki/loki.yml",
           "/mnt/glusterfs/loki/data:/loki",
           "/mnt/glusterfs/loki/compactor:/loki/compactor"
         ]

@@ -20,12 +20,12 @@ job "promtail" {
       driver = "docker"
 
       config {
-        image = "grafana/promtail:latest"
-        ports = ["promtail"]
+        image   = "grafana/promtail:latest"
+        ports   = ["promtail"]
 
-        args  = ["-config.file=/etc/promtail/promtail.yaml"]
+        args    = ["-config.file=/etc/promtail/promtail.yml"]
         volumes = [
-          "/mnt/glusterfs/promtail/promtail.yaml:/etc/promtail/promtail.yaml",
+          "/mnt/glusterfs/promtail/promtail.yml:/etc/promtail/promtail.yml",
           "/mnt/glusterfs/promtail/positions:/tmp",
           "/var/log:/alloc/logs:ro",
           "/var/lib/docker/containers:/var/lib/docker/containers:ro"
