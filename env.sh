@@ -26,7 +26,7 @@ consul kv put secret/fiqo-backend/SENDER_EMAIL YOUR_SENDER_EMAIL
 consul kv put secret/fiqo-backend/SENDER_EMAIL_PASSWORD YOUR_EMAIL_PASSWORD
 
 # --- fiqo-panel ---
-consul kv put secret/fiqo-panel/SPRING_BASE_URL http://haproxy.service.consul:8080
+consul kv put secret/fiqo-panel/SPRING_BASE_URL http://192.168.1.100:8080
 
 # --- minio ---
 consul kv put secret/minio/MINIO_ROOT_USER admin

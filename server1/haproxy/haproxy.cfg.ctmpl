@@ -43,6 +43,16 @@ backend prometheus
     server prometheus{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
+frontend loki
+   bind *:3100
+   default_backend loki
+
+backend loki
+    balance roundrobin
+{{ range $index, $service := service "loki" }}
+    server loki{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
 frontend grafana
    bind *:3000
    default_backend grafana

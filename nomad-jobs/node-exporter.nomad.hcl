@@ -21,6 +21,7 @@ job "node-exporter" {
 
       config {
         image = "prom/node-exporter:latest"
+        network_mode = "host"
       }
 
       resources {

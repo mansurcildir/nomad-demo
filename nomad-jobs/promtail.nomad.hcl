@@ -21,6 +21,7 @@ job "promtail" {
 
       config {
         image   = "grafana/promtail:latest"
+        network_mode = "host"
         ports   = ["http"]
 
         args    = ["-config.file=/etc/promtail/promtail.yml"]
@@ -35,7 +36,7 @@ job "promtail" {
 
       resources {
         cpu    = 100
-        memory = 300
+        memory = 200
       }
     }
   }
