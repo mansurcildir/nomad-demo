@@ -8,29 +8,31 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 • ``192.168.99.104`` -> ``client1``  
 • ``192.168.99.105`` -> ``client2``
 
+• ``192.168.99.100`` -> ``VIP (HAProxy)``
+
 ## Tech Stack
 
-**OS:** ``Ubuntu/Debian``
+✅ **OS:** ``Ubuntu/Debian``
 
-**Containerization:** ``Docker``
+✅ **Containerization:** ``Docker``
 
-**Orchestration:** ``Hashicorp Nomad``
+✅ **Orchestration:** ``Hashicorp Nomad``
 
-**Service Discovery and KV Store:** ``Hashicorp Consul``
+✅ **Service Discovery and KV Store:** ``Hashicorp Consul``
 
-**Overlay Network**: ``eBPF``, ``Cilium``, ``Cilium CNI``
+✅ **Overlay Network**: ``eBPF``, ``Cilium``, ``Cilium CNI``
 
-**Scalable Network Filesystem**: ``Gluster``
+✅ **Scalable Network Filesystem**: ``Gluster``
 
-**Load Balancer**: ``HAProxy``, ``keepalived (active-passive)``
+✅ **Load Balancer**: ``HAProxy``, ``keepalived`` (active-passive)
 
-**Auto Scaler**: ``nomad-autoscaler``
+✅ **Auto Scaler**: ``nomad-autoscaler``
 
-**DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
+✅ **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
-**Monitoring**: ``Grafana``
-- Metrics: ``Prometheus``
-- Logs: ``Loki``, ``Promtail``
+✅ **Monitoring**: ``Grafana``  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Metrics: ``Prometheus``  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Logs: ``Loki``, ``Promtail``
 
 **Demo App**: https://github.com/mansurcildir/fiqo
 
@@ -39,7 +41,9 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines with 1 server and 1 client.
 
 • ``192.168.1.46`` -> ``server1``  
-• ``192.168.1.194`` -> ``client1`` 
+• ``192.168.1.194`` -> ``client1``
+
+• ``192.168.1.100`` -> ``VIP (HAProxy)``
 
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-08-28" src="https://github.com/user-attachments/assets/0b07ff3b-f492-41f2-9547-b8b3f6bf8efa" />
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-08-36" src="https://github.com/user-attachments/assets/cbfe4bb1-296a-4437-9481-24718ec9c053" />
