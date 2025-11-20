@@ -13,72 +13,82 @@ frontend stats
    stats show-legends
    no log
 
-frontend fiqo_backend
+frontend fiqo-backend-frontend
    bind *:8080
-   default_backend fiqo_backend
+   default_backend fiqo-backend-backend
 
-backend fiqo_backend
+backend fiqo-backend-backend
     balance roundrobin
 {{ range $index, $service := service "fiqo-backend" }}
     server fiqo-backend{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
-frontend fiqo_panel
+frontend fiqo-panel-frontend
    bind *:80
-   default_backend fiqo_panel
+   default_backend fiqo-panel-backend
 
-backend fiqo_panel
+backend fiqo-panel-backend
     balance roundrobin
 {{ range $index, $service := service "fiqo-panel" }}
     server fiqo-panel{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
-frontend prometheus
+frontend prometheus-frontend
    bind *:9091
-   default_backend prometheus
+   default_backend prometheus-backend
 
-backend prometheus
+backend prometheus-backend
     balance roundrobin
 {{ range $index, $service := service "prometheus" }}
     server prometheus{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
-frontend grafana
-   bind *:3000
-   default_backend grafana
+frontend loki-frontend
+   bind *:3100
+   default_backend loki-backend
 
-backend grafana
+backend loki-backend
+    balance roundrobin
+{{ range $index, $service := service "loki" }}
+    server loki{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+{{ end }}
+
+frontend grafana-frontend
+   bind *:3000
+   default_backend grafana-backend
+
+backend grafana-backend
     balance roundrobin
 {{ range $index, $service := service "grafana" }}
     server grafana{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
-frontend minio-api
+frontend minio-api-frontend
    bind *:9000
-   default_backend minio-api
+   default_backend minio-api-backend
 
-backend minio-api
+backend minio-api-backend
     balance roundrobin
 {{ range $index, $service := service "minio-api" }}
     server minio-api{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
-frontend minio-console
+frontend minio-console-frontend
    bind *:9001
-   default_backend minio-console
+   default_backend minio-console-backend
 
-backend minio-console
+backend minio-console-backend
     balance roundrobin
 {{ range $index, $service := service "minio-console" }}
     server minio-console{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
 
-frontend postgres
+frontend postgres-frontend
     bind *:5432
     mode tcp
-    default_backend postgres
+    default_backend postgres-backend
 
-backend postgres
+backend postgres-backend
     mode tcp
     balance roundrobin
 {{ range $index, $service := service "postgres" }}
