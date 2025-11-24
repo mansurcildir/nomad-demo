@@ -36,7 +36,8 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Metrics: ``Prometheus``  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Logs: ``Loki``, ``Promtail``
 
-**Demo App**: https://github.com/mansurcildir/fiqo
+**Demo App**: https://github.com/mansurcildir/fiqo  
+**PgEdge Docs**: https://docs.pgedge.com/platform/installing_pgedge/manual
 
 ## Screenshots
 
