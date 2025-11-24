@@ -1,15 +1,14 @@
-pgedge spock node-create n1 'host=192.168.99.105 user=vboxuser dbname=fiqo' fiqo
+pgedge spock node-create n5 'host=192.168.99.105 user=vboxuser dbname=fiqo' fiqo
 
-pgedge spock sub-create sub_n1 'host=192.168.99.101 port=5432 user=vboxuser dbname=fiqo' fiqo
-pgedge spock sub-create sub_n2 'host=192.168.99.102 port=5432 user=vboxuser dbname=fiqo' fiqo
-pgedge spock sub-create sub_n3 'host=192.168.99.103 port=5432 user=vboxuser dbname=fiqo' fiqo
-pgedge spock sub-create sub_n4 'host=192.168.99.104 port=5432 user=vboxuser dbname=fiqo' fiqo
-pgedge spock sub-create sub_n5 'host=192.168.99.105 port=5432 user=vboxuser dbname=fiqo' fiqo
+pgedge spock sub-create sub_n5n1 'host=192.168.99.101 port=5432 user=vboxuser dbname=fiqo' fiqo
+pgedge spock sub-create sub_n5n2 'host=192.168.99.102 port=5432 user=vboxuser dbname=fiqo' fiqo
+pgedge spock sub-create sub_n5n3 'host=192.168.99.103 port=5432 user=vboxuser dbname=fiqo' fiqo
+pgedge spock sub-create sub_n5n4 'host=192.168.99.104 port=5432 user=vboxuser dbname=fiqo' fiqo
 
 source pg17/pg17.env
 
-// for numeric to resolve conflicts
+// resolve numeric conflicts
 ALTER TABLE your_table ALTER COLUMN your_column SET (log_old_value=true, delta_apply_function=spock.delta_apply);
 
 // set replicas
-pgedge spock repset-add-table default '*' db_name
+pgedge spock repset-add-table default '*' fiqo
