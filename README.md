@@ -47,12 +47,13 @@ Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines 
 • ``192.168.1.194`` -> ``client1``
 
 • ``192.168.1.100`` -> ``VIP (HAProxy)``
-
-<img width="1855" height="1052" alt="Screenshot from 2025-11-19 14-24-37" src="https://github.com/user-attachments/assets/2811f0fd-01d0-4993-bb55-290e1e78407b" />
-<img width="1855" height="1052" alt="Screenshot from 2025-11-19 14-25-41" src="https://github.com/user-attachments/assets/18f7d0d4-0d2f-4f72-bb3a-6c3dc93cdfc6" />
-<img width="1855" height="1052" alt="Screenshot from 2025-11-19 14-26-06" src="https://github.com/user-attachments/assets/de8fc021-5a63-47e0-a544-ac415f0b37e4" />
-<img width="1855" height="1052" alt="Screenshot from 2025-11-19 13-56-17" src="https://github.com/user-attachments/assets/a45fc5e2-a9c1-418e-8ab5-ef9ad6ff0660" />
-<img width="1855" height="1052" alt="Screenshot from 2025-11-19 14-27-43" src="https://github.com/user-attachments/assets/a5296a85-b813-4cc4-bfae-6a8971cfe686" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-12-18" src="https://github.com/user-attachments/assets/1bff394c-c8a3-419e-9853-bb902337b54a" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-12-55" src="https://github.com/user-attachments/assets/ed228d73-0e18-4163-92b8-d0e4a3cec389" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-13-04" src="https://github.com/user-attachments/assets/f0f44e31-fdbe-4ca6-be8c-f1d7f4290e8a" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-16-42" src="https://github.com/user-attachments/assets/511ca203-5043-40b2-9fd7-f040537c10a9" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-15-32" src="https://github.com/user-attachments/assets/95b09f6f-f9da-4709-b82a-c93069dab062" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-15-41" src="https://github.com/user-attachments/assets/230d067c-0983-459a-a9ce-eaff223f9a40" />
+<img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-16-14" src="https://github.com/user-attachments/assets/83a081ed-92a0-482b-97f5-455771d2c19f" />
 <img width="1855" height="1052" alt="Screenshot from 2025-11-19 14-27-52" src="https://github.com/user-attachments/assets/05d3e7b6-32d8-4892-a105-9f93b391c451" />
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 19-57-54" src="https://github.com/user-attachments/assets/57c3af61-2c5e-4e1a-94ba-832ac8b5ac20" />
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-09-57" src="https://github.com/user-attachments/assets/015f1358-9b68-49db-a905-0ff0924b18e3" />
