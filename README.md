@@ -30,6 +30,8 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ✅ **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
+✅ **Multi-Master Distributed Postgres**: ``pgEdge (active-active)``
+
 ✅ **Monitoring**: ``Grafana``  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Metrics: ``Prometheus``  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Logs: ``Loki``, ``Promtail``
