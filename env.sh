@@ -2,7 +2,7 @@
 
 # --- fiqo-db ---
 consul kv put secret/fiqo-db/HOST haproxy.service.consul
-consul kv put secret/fiqo-db/PORT 5432
+consul kv put secret/fiqo-db/PORT 6543
 consul kv put secret/fiqo-db/DATABASE fiqo
 consul kv put secret/fiqo-db/USERNAME admin
 consul kv put secret/fiqo-db/PASSWORD admin123
@@ -24,6 +24,7 @@ consul kv put secret/fiqo-backend/SMTP_HOST YOUR_SMTP_HOST
 consul kv put secret/fiqo-backend/SMTP_PORT 587
 consul kv put secret/fiqo-backend/SENDER_EMAIL YOUR_SENDER_EMAIL
 consul kv put secret/fiqo-backend/SENDER_EMAIL_PASSWORD YOUR_EMAIL_PASSWORD
+consul kv put secret/fiqo-backend/FLYWAY_ENABLED false
 
 # --- fiqo-panel ---
 consul kv put secret/fiqo-panel/SPRING_BASE_URL http://192.168.1.100:8080

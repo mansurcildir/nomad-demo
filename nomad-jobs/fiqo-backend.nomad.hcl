@@ -52,6 +52,8 @@ job "fiqo-backend" {
         FIQO_DB_USERNAME      = {{ key "secret/fiqo-db/USERNAME" }}
         FIQO_DB_PASSWORD      = {{ key "secret/fiqo-db/PASSWORD" }}
 
+        FLYWAY_ENABLED        = {{ key "secret/fiqo-backend/FLYWAY_ENABLED" }}
+
         PANEL_BASE_URL        = {{ key "secret/fiqo-backend/PANEL_BASE_URL" }}
 
         STORAGE_STRATEGY      = {{ key "secret/fiqo-backend/STORAGE_STRATEGY" }}

@@ -4,7 +4,7 @@ job "grafana" {
   type        = "service"
 
   group "grafana" {
-    count = 2
+    count = 1
 
     network {
       mode = "cni/cilium"
