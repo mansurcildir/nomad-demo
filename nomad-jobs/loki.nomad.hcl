@@ -32,7 +32,7 @@ job "loki" {
 
       resources {
         cpu    = 100
-        memory = 200
+        memory = 300
       }
     }
   }
