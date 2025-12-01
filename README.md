@@ -47,6 +47,7 @@ Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines 
 • ``192.168.1.194`` -> ``client1``
 
 • ``192.168.1.100`` -> ``VIP (HAProxy)``
+
 <img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-12-18" src="https://github.com/user-attachments/assets/1bff394c-c8a3-419e-9853-bb902337b54a" />
 <img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-12-55" src="https://github.com/user-attachments/assets/ed228d73-0e18-4163-92b8-d0e4a3cec389" />
 <img width="1859" height="1051" alt="Screenshot from 2025-11-24 17-13-04" src="https://github.com/user-attachments/assets/f0f44e31-fdbe-4ca6-be8c-f1d7f4290e8a" />
