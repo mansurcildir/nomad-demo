@@ -22,7 +22,7 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ✅ **Overlay Network**: ``eBPF``, ``Cilium``, ``Cilium CNI``
 
-✅ **Scalable Network Filesystem**: ``Gluster``
+✅ **Scalable Network Filesystem**: ``GlusterFS``
 
 ✅ **Load Balancer**: ``HAProxy``, ``keepalived (active-passive)``
 
