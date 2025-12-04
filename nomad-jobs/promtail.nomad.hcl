@@ -31,7 +31,7 @@ job "promtail" {
           "/var/log:/alloc/logs:ro",
           "/var/lib/docker/containers:/var/lib/docker/containers:ro",
           "/opt/nomad/data/alloc:/opt/nomad/data/alloc:ro",
-          "/home/vboxuser/pgedge/data/logs/pg17:/pg17:ro"
+          "/home/mansur/pgedge/data/logs/pg17:/pg17:ro"
         ]
       }
 
