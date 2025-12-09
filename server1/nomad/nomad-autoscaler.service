@@ -7,7 +7,7 @@ After=network-online.target nomad.service
 Type=simple
 User=nomad
 Group=nomad
-ExecStart=/usr/local/bin/nomad-autoscaler agent -config=/etc/nomad.d/nomad-autoscaler.hcl -http-bind-port=8081
+ExecStart=/usr/local/bin/nomad-autoscaler agent -config=/opt/nomad/data/nomad-autoscaler.hcl -http-bind-port=8081
 Restart=on-failure
 SyslogIdentifier=nomad-autoscaler
 

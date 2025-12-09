@@ -64,7 +64,7 @@ backend grafana-backend
 {{ end }}
 
 frontend minio-api-frontend
-   bind *:9000
+   bind *:9100
    default_backend minio-api-backend
 
 backend minio-api-backend
@@ -74,7 +74,7 @@ backend minio-api-backend
 {{ end }}
 
 frontend minio-console-frontend
-   bind *:9001
+   bind *:9101
    default_backend minio-console-backend
 
 backend minio-console-backend

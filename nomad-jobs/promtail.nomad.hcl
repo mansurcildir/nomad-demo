@@ -26,8 +26,8 @@ job "promtail" {
 
         args    = ["-config.file=/etc/promtail/promtail.yml"]
         volumes = [
-          "/mnt/glusterfs/promtail/promtail.yml:/etc/promtail/promtail.yml",
-          "/mnt/glusterfs/promtail/positions:/tmp",
+          "/mnt/promtail/promtail.yml:/etc/promtail/promtail.yml",
+          "/mnt/promtail/data/positions:/tmp",
           "/var/log:/alloc/logs:ro",
           "/var/lib/docker/containers:/var/lib/docker/containers:ro",
           "/opt/nomad/data/alloc:/opt/nomad/data/alloc:ro",

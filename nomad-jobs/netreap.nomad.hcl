@@ -1,6 +1,6 @@
 job "netreap" {
+  region      = "global"
   datacenters = ["dc1"]
-  priority    = 100
   type        = "system"
 
   constraint {
