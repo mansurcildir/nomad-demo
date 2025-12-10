@@ -32,6 +32,7 @@ consul kv put secret/fiqo-panel/SPRING_BASE_URL http://192.168.1.100:8080
 # --- minio ---
 consul kv put secret/minio/MINIO_ROOT_USER admin
 consul kv put secret/minio/MINIO_ROOT_PASSWORD admin123
+consul kv put secret/minio/MINIO_PROMETHEUS_AUTH_TYPE public
 
 # --- grafana ---
 consul kv put secret/grafana/GF_SECURITY_ADMIN_USER admin
