@@ -20,8 +20,9 @@ job "node-exporter" {
       driver = "docker"
 
       config {
-        image = "prom/node-exporter:latest"
+        image        = "prom/node-exporter:latest"
         network_mode = "host"
+        ports        = ["http"]
       }
 
       resources {

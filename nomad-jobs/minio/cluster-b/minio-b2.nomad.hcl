@@ -6,6 +6,11 @@ job "minio-b2" {
   group "minio-b2" {
     count = 1
 
+    constraint {
+      attribute = "${node.unique.name}"
+      value     = "client1"
+    }
+
     network {
       mode = "cni/cilium"
     }
@@ -36,7 +41,7 @@ job "minio-b2" {
           "--console-address", ":9001"
         ]
         volumes = [
-          "/mnt/glusterfs/minio-b2/data:/data"
+          "/mnt/minio-b2/data:/data"
         ]
       }
 
