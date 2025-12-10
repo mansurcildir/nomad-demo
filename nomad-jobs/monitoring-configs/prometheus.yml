@@ -48,8 +48,14 @@ scrape_configs:
       - server: 'consul.service.consul:8500'
         services: ['fiqo-backend']
 
-  - job_name: 'minio'
+  - job_name: 'minio-cluster'
     metrics_path: '/minio/v2/metrics/cluster'
+    consul_sd_configs:
+      - server: 'consul.service.consul:8500'
+        services: [ 'minio-a1-api', 'minio-a2-api', 'minio-b1-api', 'minio-b2-api' ]
+
+  - job_name: 'minio-node'
+    metrics_path: '/minio/v2/metrics/node'
     consul_sd_configs:
       - server: 'consul.service.consul:8500'
         services: [ 'minio-a1-api', 'minio-a2-api', 'minio-b1-api', 'minio-b2-api' ]
