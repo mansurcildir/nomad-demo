@@ -11,11 +11,8 @@ sudo chmod -R 755 /mnt/glusterfs/prometheus
 sudo chown -R 472:0 /mnt/glusterfs/grafana
 sudo chmod -R 755 /mnt/glusterfs/grafana
 
-sudo chown -R nomad:nomad /mnt/glusterfs/postgres
-sudo chmod -R 755 /mnt/glusterfs/postgres
+sudo chown -R 10001:10001 /mnt/glusterfs/loki
+sudo chmod -R 755 /mnt/glusterfs/loki
 
 sudo chown -R 10001:10001 /mnt/promtail
 sudo chmod -R 755 /mnt/promtail
-
-sudo chown -R 10001:10001 /mnt/glusterfs/loki
-sudo chmod -R 755 /mnt/glusterfs/loki
