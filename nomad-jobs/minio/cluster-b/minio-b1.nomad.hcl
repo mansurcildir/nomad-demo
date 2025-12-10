@@ -1,29 +1,27 @@
-job "minio" {
+job "minio-b1" {
   region      = "global"
   datacenters = ["dc1"]
-  type        = "system"
+  type        = "service"
 
-  group "minio" {
+  group "minio-b1" {
+    count = 1
+
     network {
-      port "minio-api"{
-        static = 9000
-      }
-
-      port "minio-console" {
-        static = 9001
-      }
+      mode = "cni/cilium"
     }
 
     service {
-      name         = "minio-api"
-      port         = "minio-api"
-      tags         = ["minio-api"]
+      name         = "minio-b1-api"
+      port         = 9000
+      tags         = ["minio-b1-api"]
+      address_mode = "alloc"
     }
 
     service {
-      name         = "minio-console"
-      port         = "minio-console"
-      tags         = ["minio-console"]
+      name         = "minio-b1-console"
+      port         = 9001
+      tags         = ["minio-b1-console"]
+      address_mode = "alloc"
     }
 
     task "minio" {
@@ -31,17 +29,14 @@ job "minio" {
 
       config {
         image   = "minio/minio:latest"
-        network_mode = "host"
-
         args = [
           "server",
-          "http://192.168.1.46/data",
-          "http://192.168.1.194/data",
+          "http://minio-b1-console.service.consul/data",
+          "http://minio-b2-console.service.consul/data",
           "--console-address", ":9001"
         ]
-
         volumes = [
-          "/mnt/minio/data:/data"
+          "/mnt/glusterfs/minio-b1/data:/data"
         ]
       }
 

@@ -64,27 +64,39 @@ backend grafana-backend
 {{ end }}
 
 frontend minio-api-frontend
-   bind *:9100
+   bind *:9000
    default_backend minio-api-backend
 
 backend minio-api-backend
     balance roundrobin
-{{ range $index, $service := service "minio-api" }}
-    server minio-api{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+    option httpchk GET http://minio-lb-a.service.consul:9000/minio/health/ready
+    http-check expect status 200
+{{ range $index, $service := service "minio-lb-a" }}
+    server minio-ca-api{{$index | add 1}} {{ $service.Address }}:9000 check
+{{ end }}
+
+{{ range $index, $service := service "minio-lb-b" }}
+    server minio-cb-api{{$index | add 1}} {{ $service.Address }}:9000 check backup
 {{ end }}
 
 frontend minio-console-frontend
-   bind *:9101
+   bind *:9001
    default_backend minio-console-backend
 
 backend minio-console-backend
     balance roundrobin
-{{ range $index, $service := service "minio-console" }}
-    server minio-console{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
+    option httpchk GET http://minio-lb-a.service.consul:9000/minio/health/ready
+    http-check expect status 200
+{{ range $index, $service := service "minio-lb-a" }}
+    server minio-ca-console{{$index | add 1}} {{ $service.Address }}:9001 check
+{{ end }}
+
+{{ range $index, $service := service "minio-lb-b" }}
+    server minio-cb-console{{$index | add 1}} {{ $service.Address }}:9001 check backup
 {{ end }}
 
 frontend postgres-frontend
-    bind *:5432
+    bind *:6543
     mode tcp
     default_backend postgres-backend
 
