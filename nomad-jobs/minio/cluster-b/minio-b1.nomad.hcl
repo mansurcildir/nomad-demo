@@ -29,7 +29,7 @@ job "minio-b1" {
 
       config {
         image   = "minio/minio:latest"
-        args = [
+        args    = [
           "server",
           "http://minio-b1-console.service.consul/data",
           "http://minio-b2-console.service.consul/data",
@@ -42,8 +42,9 @@ job "minio-b1" {
 
       template {
         data = <<EOT
-        MINIO_ROOT_USER     = {{ key "secret/minio/MINIO_ROOT_USER" }}
-        MINIO_ROOT_PASSWORD = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
+        MINIO_ROOT_USER            = {{ key "secret/minio/MINIO_ROOT_USER" }}
+        MINIO_ROOT_PASSWORD        = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
+        MINIO_PROMETHEUS_AUTH_TYPE = {{ key "secret/minio/MINIO_PROMETHEUS_AUTH_TYPE" }}
         EOT
 
         destination         = "local/.env"

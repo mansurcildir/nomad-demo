@@ -42,8 +42,9 @@ job "minio-a1" {
 
       template {
         data = <<EOT
-        MINIO_ROOT_USER     = {{ key "secret/minio/MINIO_ROOT_USER" }}
-        MINIO_ROOT_PASSWORD = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
+        MINIO_ROOT_USER            = {{ key "secret/minio/MINIO_ROOT_USER" }}
+        MINIO_ROOT_PASSWORD        = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
+        MINIO_PROMETHEUS_AUTH_TYPE = {{ key "secret/minio/MINIO_PROMETHEUS_AUTH_TYPE" }}
         EOT
 
         destination         = "local/.env"
