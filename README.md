@@ -32,6 +32,8 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ✅ **Multi-Master Distributed Postgres**: ``pgEdge (active-active)``
 
+✅ **Multi-Master Distributed Object Storage**: ``MinIO (active-active)``
+
 ✅ **Monitoring**: ``Grafana``  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Metrics: ``Prometheus``  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Logs: ``Loki``, ``Promtail``
