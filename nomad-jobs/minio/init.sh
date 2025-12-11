@@ -11,8 +11,3 @@ mc replicate add lb-a/fiqo \
   --remote-bucket lb-b/fiqo \
   --replicate "existing-objects,delete,delete-marker" \
   --priority 1
-
-mc replicate add lb-b/fiqo \
-  --remote-bucket lb-a/fiqo \
-  --replicate "existing-objects,delete,delete-marker" \
-  --priority 1

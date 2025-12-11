@@ -1,0 +1,14 @@
+[Unit]
+Description=MinIO Sync
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Environment=HOME=/root
+ExecStart=/mnt/glusterfs/minio-sync.sh
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
