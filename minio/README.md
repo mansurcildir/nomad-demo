@@ -1,6 +1,6 @@
 # MinIO
 
-This demonstration shows a documentation of ``MinIO``  master-backup setup between clusters which is active-active replication.
+This demonstration shows a documentation for setting up a ``MinIO`` master-slave configuration between clusters using active-active replication.
 
 • ``minio-cluster-a`` (master) -> ``minio-a1``, ``minio-a2``  
 • ``minio-cluster-b`` (backup) -> ``minio-b1``, ``minio-b2``
