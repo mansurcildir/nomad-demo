@@ -7,7 +7,7 @@ This demonstration shows a documentation of ``MinIO``  master-backup setup betwe
 
 Each cluster has a HAProxy load balancer at the beginning for high availability.
 
-The one-way replication rule for ``minio-cluster-a`` and ``minio-cluster-b`` is initiated with ``mc replicate add``
+The one-way replication rule is initiated  with ``mc replicate add`` from ``minio-cluster-a`` to ``minio-cluster-b``
   
 
 The integrity of ``minio-cluster-a`` is checked by the systemd service, and if ``minio-cluster-a`` is operational, the data is synchronized once via ``mc mirror``.
