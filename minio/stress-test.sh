@@ -9,7 +9,7 @@ BUCKET="fiqo"
 SOURCE_DIR="/home/mansur/Desktop/minio-test/data"
 PARALLEL_JOBS=5
 ITERATIONS=10
-LOG_FILE="/home/mansur/Desktop/minio-testtest/stress_test.log"
+LOG_FILE="/home/mansur/Desktop/minio-test/stress_test.log"
 
 mc alias set $ALIAS $ENDPOINT $USER $PASS
 
