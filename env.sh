@@ -30,8 +30,8 @@ consul kv put secret/fiqo-backend/FLYWAY_ENABLED false
 consul kv put secret/fiqo-panel/SPRING_BASE_URL http://192.168.1.100:8080
 
 # --- minio ---
-consul kv put secret/minio/MINIO_ROOT_USER admin
-consul kv put secret/minio/MINIO_ROOT_PASSWORD admin123
+consul kv put secret/minio/MINIO_ACCESS_KEY fiqo
+consul kv put secret/minio/MINIO_SECRET_KEY fiqo1234
 consul kv put secret/minio/MINIO_PROMETHEUS_AUTH_TYPE public
 
 # --- grafana ---

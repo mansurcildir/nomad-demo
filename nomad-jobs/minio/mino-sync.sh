@@ -9,11 +9,11 @@ while true; do
     if [ "$STATUS" -eq 200 ]; then
         if [ ! -f "$FLAG_FILE" ]; then
             echo "MinIO UP!"
-            mc alias set lb-a http://minio-lb-a.service.consul:9000 admin admin123
-            mc alias set lb-b http://minio-lb-b.service.consul:9000 admin admin123
+            mc admin policy attach lb-a readonly --user fiqo
 
             if mc mirror lb-b/fiqo lb-a/fiqo --overwrite --remove; then
                 touch "$FLAG_FILE"
+                mc admin policy attach lb-a readwrite --user fiqo
                 echo "Synchronizing DONE!"
             else
                 echo "Synchronizing FAILED!"

@@ -59,8 +59,8 @@ job "fiqo-backend" {
         STORAGE_STRATEGY      = {{ key "secret/fiqo-backend/STORAGE_STRATEGY" }}
         MINIO_BASE_URL        = {{ key "secret/fiqo-backend/MINIO_BASE_URL" }}
         MINIO_BUCKET_NAME     = {{ key "secret/fiqo-backend/MINIO_BUCKET_NAME" }}
-        MINIO_ACCESS_KEY      = {{ key "secret/minio/MINIO_ROOT_USER" }}
-        MINIO_SECRET_KEY      = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
+        MINIO_ACCESS_KEY      = {{ key "secret/minio/MINIO_ACCESS_KEY" }}
+        MINIO_SECRET_KEY      = {{ key "secret/minio/MINIO_SECRET_KEY" }}
 
         ACCESS_TOKEN_EXP_MIN  = {{ key "secret/fiqo-backend/ACCESS_TOKEN_EXP_MIN" }}
         REFRESH_TOKEN_EXP_MIN = {{ key "secret/fiqo-backend/REFRESH_TOKEN_EXP_MIN" }}
