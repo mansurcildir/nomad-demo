@@ -69,3 +69,6 @@ Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines 
 <img width="1855" height="1043" alt="Screenshot from 2025-11-17 20-07-31" src="https://github.com/user-attachments/assets/3081f1f6-68ee-4a57-8e47-97b20981dd1d" />
 <img width="1859" height="366" alt="Screenshot from 2025-11-24 18-07-15" src="https://github.com/user-attachments/assets/01f8650e-17dd-42b5-9c9d-5d9da942a012" />
 <img width="1859" height="366" alt="Screenshot from 2025-11-24 18-07-23" src="https://github.com/user-attachments/assets/7a84899e-8c04-44d1-9293-e4da62e9b7df" />
+<img width="1843" height="1008" alt="Screenshot from 2025-12-18 19-02-25" src="https://github.com/user-attachments/assets/0ca5b15a-10e4-4680-9404-82845ad00c38" />
+<img width="1843" height="1008" alt="Screenshot from 2025-12-18 19-02-37" src="https://github.com/user-attachments/assets/642001b7-b037-4d33-9506-6bd93f42d7be" />
+<img width="1843" height="1008" alt="Screenshot from 2025-12-18 19-01-58" src="https://github.com/user-attachments/assets/5dc876d9-f31d-4a15-942c-876d5d8a24b7" />
