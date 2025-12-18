@@ -32,6 +32,10 @@ job "minio-b1" {
     task "minio" {
       driver = "docker"
 
+      vault {
+        role = "minio-b1"
+      }
+
       config {
         image   = "minio/minio:latest"
         args    = [
@@ -47,9 +51,9 @@ job "minio-b1" {
 
       template {
         data = <<EOT
-        MINIO_ROOT_USER            = {{ key "secret/minio/MINIO_ROOT_USER" }}
-        MINIO_ROOT_PASSWORD        = {{ key "secret/minio/MINIO_ROOT_PASSWORD" }}
-        MINIO_PROMETHEUS_AUTH_TYPE = {{ key "secret/minio/MINIO_PROMETHEUS_AUTH_TYPE" }}
+        MINIO_ROOT_USER            = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_ROOT_USER"}}{{end}}"
+        MINIO_ROOT_PASSWORD        = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_ROOT_PASSWORD"}}{{end}}"
+        MINIO_PROMETHEUS_AUTH_TYPE = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_PROMETHEUS_AUTH_TYPE"}}{{end}}"
         EOT
 
         destination         = "local/.env"

@@ -20,6 +20,10 @@ job "grafana" {
     task "grafana" {
       driver = "docker"
 
+      vault {
+        role = "grafana"
+      }
+
       config {
         image   = "grafana/grafana:latest"
         volumes = [
@@ -29,8 +33,8 @@ job "grafana" {
 
       template {
         data = <<EOT
-        GF_SECURITY_ADMIN_USER     = {{ key "secret/grafana/GF_SECURITY_ADMIN_USER" }}
-        GF_SECURITY_ADMIN_PASSWORD = {{ key "secret/grafana/GF_SECURITY_ADMIN_PASSWORD" }}
+        GF_SECURITY_ADMIN_USER     = "{{with secret "secret/data/grafana"}}{{index .Data.data "GF_SECURITY_ADMIN_USER"}}{{end}}"
+        GF_SECURITY_ADMIN_PASSWORD = "{{with secret "secret/data/grafana"}}{{index .Data.data "GF_SECURITY_ADMIN_PASSWORD"}}{{end}}"
         EOT
 
         destination                = "local/.env"

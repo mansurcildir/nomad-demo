@@ -21,6 +21,12 @@ plugin "docker" {
   }
 }
 
+vault {
+  enabled               = true
+  address               = "http://active.vault.service.consul:8200"
+  jwt_auth_backend_path = "jwt-nomad"
+}
+
 telemetry {
   prometheus_metrics         = true
   publish_allocation_metrics = true

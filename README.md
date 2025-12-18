@@ -30,6 +30,8 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ✅ **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
 
+✅ **Secure Secret Manager:** ``Hashicorp Vault``
+
 ✅ **Multi-Master Distributed Postgres**: ``pgEdge (active-active)``
 
 ✅ **Multi-Master Distributed Object Storage**: ``MinIO (active-active)``

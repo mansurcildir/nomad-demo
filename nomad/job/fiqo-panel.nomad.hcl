@@ -20,13 +20,17 @@ job "fiqo-panel" {
     task "fiqo-panel" {
       driver = "docker"
 
+      vault {
+        role = "fiqo-panel"
+      }
+
       config {
         image = "mansur74/fiqo-panel:latest"
       }
 
       template {
         data = <<EOT
-        SPRING_BASE_URL = {{ key "secret/fiqo-panel/SPRING_BASE_URL" }}
+        SPRING_BASE_URL = "{{with secret "secret/data/fiqo-panel"}}{{index .Data.data "SPRING_BASE_URL"}}{{end}}"
         EOT
 
         destination     = "local/.env"

@@ -22,6 +22,16 @@ plugin "docker" {
   }
 }
 
+vault {
+  enabled = true
+  address = "http://active.vault.service.consul:8200"
+
+  default_identity {
+    aud = ["production"]
+    ttl = "30m"
+  }
+}
+
 telemetry {
   prometheus_metrics         = true
   publish_allocation_metrics = true
