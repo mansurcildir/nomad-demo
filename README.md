@@ -1,6 +1,6 @@
 # nomad-demo
 
-This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup and orchestration for FIQO (File Quick Online) application.
+This demonstration shows a documentation of ``HashiCorp Nomad`` cluster setup and orchestration for FIQO (File Quick Online) application.
 
 • ``192.168.99.101`` -> ``server1``  
 • ``192.168.99.102`` -> ``server2``  
@@ -16,9 +16,9 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ✅ **Containerization:** ``Docker``
 
-✅ **Orchestration:** ``Hashicorp Nomad``
+✅ **Orchestration:** ``HashiCorp Nomad``
 
-✅ **Service Discovery and KV Store:** ``Hashicorp Consul``
+✅ **Service Discovery and KV Store:** ``HashiCorp Consul``
 
 ✅ **Overlay Network**: ``eBPF``, ``Cilium``, ``Cilium CNI``
 
@@ -28,9 +28,9 @@ This demonstration shows a documentation of ``Hashicorp Nomad`` cluster setup an
 
 ✅ **Auto Scaler**: ``nomad-autoscaler``
 
-✅ **DNS Resolver**: ``systemd-resolved``, ``Hashicorp Consul``
+✅ **DNS Resolver**: ``systemd-resolved``, ``HashiCorp Consul``
 
-✅ **Secure Secret Manager:** ``Hashicorp Vault``
+✅ **Secure Secret Manager:** ``HashiCorp Vault``
 
 ✅ **Multi-Master Distributed Postgres**: ``pgEdge (active-active)``
 

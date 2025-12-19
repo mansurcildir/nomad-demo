@@ -9,7 +9,7 @@ BUCKET="fiqo"
 SOURCE_DIR="/home/mansur/Desktop/minio-test/data"
 PARALLEL_JOBS=5
 ITERATIONS=10
-LOG_FILE="/home/mansur/Desktop/minio-test/stress_test.log"
+LOG_FILE="/home/mansur/Desktop/minio-test/test.log"
 
 mc alias set $ALIAS $ENDPOINT $USER $PASS
 
@@ -29,16 +29,16 @@ upload_job() {
     fi
 }
 
-echo "[$(date)] Cleaning old stress folders..." | tee -a $LOG_FILE
-mc ls --recursive "$ALIAS/$BUCKET" | awk '{print $NF}' | grep '^stress_' | while read folder; do
+echo "[$(date)] Cleaning old test folders..." | tee -a $LOG_FILE
+mc ls --recursive "$ALIAS/$BUCKET" | awk '{print $NF}' | grep '^test_' | while read folder; do
     echo "Removing $folder" | tee -a $LOG_FILE
     mc rm -r --force "$ALIAS/$BUCKET/$folder"
 done
 
-echo "[$(date)] Starting stress test..." | tee -a $LOG_FILE
+echo "[$(date)] Starting test test..." | tee -a $LOG_FILE
 
 for i in $(seq 1 $ITERATIONS); do
-    folder="stress_$i"
+    folder="test_$i"
     upload_job "$folder" &
 
     while (( $(jobs -r | wc -l) >= PARALLEL_JOBS )); do
@@ -48,4 +48,4 @@ done
 
 wait
 
-echo "[$(date)] Stress test COMPLETED"
+echo "[$(date)] Test COMPLETED"
