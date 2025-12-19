@@ -12,6 +12,8 @@ The one-way replication rule is initiated  with ``mc replicate add`` from ``mini
 
 The integrity of ``minio-cluster-a`` is checked by the systemd service and the data is synchronized once via ``mc mirror`` from ``minio-cluster-b`` to ``minio-cluster-a`` when ``minio-cluster-a`` is up.
 
+## Screenshots
+
 <img width="864" height="767" alt="relation-diagram" src="https://github.com/user-attachments/assets/496b963e-3159-481e-a6e7-87d388b6c364" />
 <img width="584" height="545" alt="scheduling-diagram" src="https://github.com/user-attachments/assets/f6c3fe03-1b06-4f15-a146-32dd6d7a7777" />
 <img width="1842" height="1011" alt="minio-lb-a" src="https://github.com/user-attachments/assets/7d9619ba-069e-4ba4-82b4-dc156e7d395a" />
