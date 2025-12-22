@@ -24,7 +24,6 @@ job "haproxy" {
         image        = "haproxy:3.2"
         network_mode = "host"
         ports        = ["http"]
-        cap_add      = ["NET_BIND_SERVICE"]
         volumes      = [
           "local/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
         ]
