@@ -14,6 +14,7 @@ job "haproxy" {
       name = "haproxy"
       port = "http"
       tags = ["haproxy"]
+      address = "192.168.1.100"
     }
 
     task "haproxy" {

@@ -3,7 +3,7 @@ job "minio-lb-b" {
   datacenters = ["dc1"]
   type        = "service"
 
-  group "haproxy" {
+  group "minio-lb-b" {
     count = 1
 
     network {
@@ -17,7 +17,7 @@ job "minio-lb-b" {
       address_mode = "alloc"
     }
 
-    task "haproxy" {
+    task "minio-lb-b" {
       driver = "docker"
 
       config {
