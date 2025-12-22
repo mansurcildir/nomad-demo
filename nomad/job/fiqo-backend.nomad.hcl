@@ -61,14 +61,13 @@ job "fiqo-backend" {
         FIQO_DB_USERNAME      = "{{with secret "secret/data/fiqo-db"}}{{index .Data.data "USERNAME"}}{{end}}"
         FIQO_DB_PASSWORD      = "{{with secret "secret/data/fiqo-db"}}{{index .Data.data "PASSWORD"}}{{end}}"
 
-        MINIO_ACCESS_KEY      = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_ACCESS_KEY"}}{{end}}"
-        MINIO_SECRET_KEY      = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_SECRET_KEY"}}{{end}}"
-
         FLYWAY_ENABLED        = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "FLYWAY_ENABLED"}}{{end}}"
         PANEL_BASE_URL        = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "PANEL_BASE_URL"}}{{end}}"
         STORAGE_STRATEGY      = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "STORAGE_STRATEGY"}}{{end}}"
         MINIO_BASE_URL        = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "MINIO_BASE_URL"}}{{end}}"
         MINIO_BUCKET_NAME     = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "MINIO_BUCKET_NAME"}}{{end}}"
+        MINIO_ACCESS_KEY      = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "MINIO_ACCESS_KEY"}}{{end}}"
+        MINIO_SECRET_KEY      = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "MINIO_SECRET_KEY"}}{{end}}"
         ACCESS_TOKEN_EXP_MIN  = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "ACCESS_TOKEN_EXP_MIN"}}{{end}}"
         REFRESH_TOKEN_EXP_MIN = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "REFRESH_TOKEN_EXP_MIN"}}{{end}}"
         ACCESS_TOKEN_KEY      = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "ACCESS_TOKEN_KEY"}}{{end}}"

@@ -9,6 +9,8 @@ vault kv put secret/fiqo-backend \
   STORAGE_STRATEGY=s3 \
   MINIO_BASE_URL=http://haproxy.service.consul:9000 \
   MINIO_BUCKET_NAME=fiqo \
+  MINIO_ACCESS_KEY=fiqo \
+  MINIO_SECRET_KEY=fiqo1234 \
   ACCESS_TOKEN_EXP_MIN=5 \
   REFRESH_TOKEN_EXP_MIN=30 \
   ACCESS_TOKEN_KEY=561744090F30C5564F793305AB783BC96545E88EE42A7ED0CED578C72CE132A3 \
@@ -34,8 +36,8 @@ vault kv put secret/fiqo-db \
   PASSWORD=admin123
 
 vault kv put secret/minio \
-  MINIO_ACCESS_KEY=fiqo \
-  MINIO_SECRET_KEY=fiqo1234 \
+  MINIO_ROOT_USER=admin \
+  MINIO_ROOT_PASSWORD=admin123 \
   MINIO_PROMETHEUS_AUTH_TYPE=public
 
 vault kv put secret/grafana \
