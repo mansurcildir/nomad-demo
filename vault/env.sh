@@ -5,7 +5,7 @@ vault operator unseal 871E0VElnysL2FrDLJ9pU7MOj5YE17Suf6FgSZC02zWC
 vault operator unseal 9Ue+AIfegcNpYGPNLMyig9Fynx7SM3hY9sP0A3Fh2E+s
 
 vault kv put secret/fiqo-backend \
-  PANEL_BASE_URL=http://haproxy.service.consul:80 \
+  PANEL_BASE_URL=http://haproxy.service.consul:8090 \
   STORAGE_STRATEGY=s3 \
   MINIO_BASE_URL=http://haproxy.service.consul:9000 \
   MINIO_BUCKET_NAME=fiqo \
