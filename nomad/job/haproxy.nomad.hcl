@@ -1,3 +1,36 @@
+job "haproxy" {
+  region      = "global"
+  datacenters = ["dc1"]
+  type        = "system"
+
+  group "haproxy" {
+    network {
+      port "http"{
+        static = 8080
+      }
+    }
+
+    service {
+      name = "haproxy"
+      port = "http"
+      tags = ["haproxy"]
+    }
+
+    task "haproxy" {
+      driver = "docker"
+
+      config {
+        image        = "haproxy:3.2"
+        network_mode = "host"
+        ports        = ["http"]
+        cap_add      = ["NET_BIND_SERVICE"]
+        volumes      = [
+          "local/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+        ]
+      }
+
+      template {
+        data = <<EOF
 global
     maxconn 2000
 
@@ -24,7 +57,7 @@ backend fiqo-backend-backend
 {{ end }}
 
 frontend fiqo-panel-frontend
-   bind *:80
+   bind *:8090
    default_backend fiqo-panel-backend
 
 backend fiqo-panel-backend
@@ -106,3 +139,20 @@ backend postgres-backend
 {{ range $index, $service := service "postgres" }}
     server postgres{{$index | add 1}} {{ $service.Address }}:{{ $service.Port }} check
 {{ end }}
+
+resolvers consul
+    nameserver consul 127.0.0.1:8600
+    accepted_payload_size 8192
+    hold valid 5s
+EOF
+
+        destination = "local/haproxy.cfg"
+      }
+
+      resources {
+        cpu    = 200
+        memory = 100
+      }
+    }
+  }
+}
