@@ -25,14 +25,14 @@ job "haproxy" {
         network_mode = "host"
         ports        = ["http"]
         volumes      = [
-          "local/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+          "local/haproxy:/usr/local/etc/haproxy"
         ]
       }
 
       template {
         change_mode = "signal"
         change_signal = "SIGHUP"
-        destination = "local/haproxy.cfg"
+        destination = "local/haproxy/haproxy.cfg"
         data = <<EOF
 global
     maxconn 2000
