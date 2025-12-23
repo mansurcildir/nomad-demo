@@ -55,7 +55,7 @@ Screenshots of an example demonstration for ``Ubuntu/Debian`` physical machines 
 <img width="1847" height="1051" alt="Screenshot from 2025-12-10 20-00-59" src="https://github.com/user-attachments/assets/f2f8062a-418e-41f4-bc3b-b1f6b3b9f47c" />
 <img width="1847" height="1051" alt="Screenshot from 2025-12-10 20-01-08" src="https://github.com/user-attachments/assets/cd1d988f-804f-4577-bfaa-9dcce5f602d2" />
 <img width="1847" height="1051" alt="Screenshot from 2025-12-10 20-01-50" src="https://github.com/user-attachments/assets/1b77a383-8c6a-46c6-a917-c83f0473e4ad" />
-<img width="1842" height="1011" alt="Screenshot from 2025-12-10 19-50-03" src="https://github.com/user-attachments/assets/53d4e7de-c12a-4a7b-b156-9e190b0abb50" />
+<img width="1853" height="1011" alt="Screenshot from 2025-12-22 12-22-38" src="https://github.com/user-attachments/assets/fa011b2b-8118-41c3-95a0-11c49d337c88" />
 <img width="1842" height="1011" alt="Screenshot from 2025-12-10 19-51-20" src="https://github.com/user-attachments/assets/ec0b59b8-9d89-4a1a-9be3-2066becb6d26" />
 <img width="1842" height="1011" alt="Screenshot from 2025-12-10 19-51-41" src="https://github.com/user-attachments/assets/5350553e-706e-4a79-a9e9-7933c5fcb405" />
 <img width="1845" height="1011" alt="Screenshot from 2025-12-10 20-11-51" src="https://github.com/user-attachments/assets/481b721b-27bc-4e62-b4b4-454cd0b18016" />
