@@ -28,6 +28,9 @@ job "minio-lb-a" {
       }
 
       template {
+        change_mode = "signal"
+        change_signal = "SIGHUP"
+        destination = "local/haproxy.cfg"
         data = <<EOF
 global
     maxconn 2000
@@ -77,8 +80,6 @@ resolvers consul
     accepted_payload_size 8192
     hold valid 5s
 EOF
-
-        destination = "local/haproxy.cfg"
       }
 
       resources {
