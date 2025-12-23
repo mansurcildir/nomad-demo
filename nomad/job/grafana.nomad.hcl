@@ -32,14 +32,13 @@ job "grafana" {
       }
 
       template {
+        env                   = true
+        destination           = "local/.env"
+        change_mode           = "restart"
         data = <<EOT
         GF_SECURITY_ADMIN_USER     = "{{with secret "secret/data/grafana"}}{{index .Data.data "GF_SECURITY_ADMIN_USER"}}{{end}}"
         GF_SECURITY_ADMIN_PASSWORD = "{{with secret "secret/data/grafana"}}{{index .Data.data "GF_SECURITY_ADMIN_PASSWORD"}}{{end}}"
         EOT
-
-        destination                = "local/.env"
-        env                        = true
-        change_mode                = "restart"
       }
 
       resources {

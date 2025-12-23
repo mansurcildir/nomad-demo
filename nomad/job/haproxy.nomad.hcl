@@ -14,7 +14,7 @@ job "haproxy" {
       name = "haproxy"
       port = "http"
       tags = ["haproxy"]
-      address = "192.168.99.100" //VIP
+      address = "192.168.1.100" //VIP
     }
 
     task "haproxy" {
@@ -30,6 +30,9 @@ job "haproxy" {
       }
 
       template {
+        change_mode = "signal"
+        change_signal = "SIGHUP"
+        destination = "local/haproxy.cfg"
         data = <<EOF
 global
     maxconn 2000
@@ -145,8 +148,6 @@ resolvers consul
     accepted_payload_size 8192
     hold valid 5s
 EOF
-
-        destination = "local/haproxy.cfg"
       }
 
       resources {

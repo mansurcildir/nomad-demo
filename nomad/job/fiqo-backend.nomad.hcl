@@ -54,6 +54,9 @@ job "fiqo-backend" {
       }
 
       template {
+        env                   = true
+        destination           = "local/.env"
+        change_mode           = "restart"
         data = <<EOT
         FIQO_DB_HOST          = "{{with secret "secret/data/fiqo-db"}}{{index .Data.data "HOST"}}{{end}}"
         FIQO_DB_PORT          = "{{with secret "secret/data/fiqo-db"}}{{index .Data.data "PORT"}}{{end}}"
@@ -79,10 +82,6 @@ job "fiqo-backend" {
         SENDER_EMAIL          = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "SENDER_EMAIL"}}{{end}}"
         SENDER_EMAIL_PASSWORD = "{{with secret "secret/data/fiqo-backend"}}{{index .Data.data "SENDER_EMAIL_PASSWORD"}}{{end}}"
         EOT
-
-        destination           = "local/.env"
-        env                   = true
-        change_mode           = "restart"
       }
 
       resources {

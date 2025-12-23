@@ -50,15 +50,14 @@ job "minio-b2" {
       }
 
       template {
+        env                   = true
+        destination           = "local/.env"
+        change_mode           = "restart"
         data = <<EOT
         MINIO_ROOT_USER            = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_ROOT_USER"}}{{end}}"
         MINIO_ROOT_PASSWORD        = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_ROOT_PASSWORD"}}{{end}}"
         MINIO_PROMETHEUS_AUTH_TYPE = "{{with secret "secret/data/minio"}}{{index .Data.data "MINIO_PROMETHEUS_AUTH_TYPE"}}{{end}}"
         EOT
-
-        destination         = "local/.env"
-        env                 = true
-        change_mode         = "restart"
       }
 
       resources {

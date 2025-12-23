@@ -29,13 +29,12 @@ job "fiqo-panel" {
       }
 
       template {
+        env                   = true
+        destination           = "local/.env"
+        change_mode           = "restart"
         data = <<EOT
         SPRING_BASE_URL = "{{with secret "secret/data/fiqo-panel"}}{{index .Data.data "SPRING_BASE_URL"}}{{end}}"
         EOT
-
-        destination     = "local/.env"
-        env             = true
-        change_mode     = "restart"
       }
 
       resources {
